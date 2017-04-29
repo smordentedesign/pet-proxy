@@ -221,23 +221,23 @@ img{
   display:none;
 }
 
+.mobileNav a{
+  text-decoration: none;
+  color:#fff;
+  font-size: 20px;
+}
+
 .mobileNav li{
   background-color: #1075a9;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   list-style: none;
 }
- 
+
 .mobileNav li ul li{
   background-color: #00acd1;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.mobileNav li a{
-  text-decoration: none;
-  color:#fff;
-  font-size: 18px;
 }
 
 .mobileNav ul li{
@@ -248,6 +248,10 @@ img{
 
 .mobileNav ul li a{
   font-size: 14px;
+}
+
+.mobileNav ul a{
+  font-size: 16px;
 }
 
 .mobileNav.active{
