@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>PetProxy</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="css/simple-grid-petproxy.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="row"><!--Nav Tabs begin-->
+		<div class="col-2"><img alt="Pet Proxy logo" src="images/pp_logo.png" style="width:50%; height=50%; margin-top:8px;"></div>
+		<div class="col-10" id="nav">
+			<div class="col-3" id="navItem1">
+				<a href="dashboard.html">My PetProxy</a>
+			</div>
+			<div class="col-3" id="navItem2-ON">
+				<a href="animals.html">Our Animals</a>
+			</div>
+			<div class="col-3" id="navItem3">
+				<a href="pending_adoptions.html">Adoptions</a>
+			</div>
+			<div class="col-3" id="navItem4">
+				<a href="website.html">Our Website</a>
+			</div>
+		</div>
+	</div><!--Nav Tabs end-->
+
+	<div class="row" id="submenu2"><!--submenu begin-->
+		<div class="col-4-sm subTxt">
+			<a class="btnSub2-ON" href="add_animal.html">Add an animal</a>
+		</div>
+		<div class="col-4-sm subTxt">
+			<a class="btnSub2" href="animals.html">Available animals</a>
+		</div>
+		<div class="col-4-sm subTxt">
+			<a class="btnSub2" href="archived_profiles.html">Archived profiles</a>
+		</div>
+	</div><!--submenu end-->
+
+	<div class="container"><!--Container begin-->
+
+
+		<div class="row">
+			<div class="col-12 page-header">
+				<p>Add an Animal</p>
+			</div>
+		</div>
+
+		<div class="row">
+
+		</div>
+
+		<div class="row anml-box"><!--the basics begin-->
+			<div class="col-12 anml-box-header">
+				<h3>The Basics</h3>
+			</div>
+			<div class="col-6">
+				<form class="anml-form">
+					<p>Animal's Name:</p><input style="margin-top:2px;" type="text" value="Louie">
+				</form>
+			</div>
+
+			<div class="col-6">
+				<form class="anml-form" style="margin-top:17px;">
+					Animal Type:<br>
+					<select name="type">
+						<option value="dog">
+							dog
+						</option>
+						<option value="cat">
+							cat
+						</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-12 anml-textbox">
+				<p>Share this animal's story!</p>
+				<textarea cols="50" rows="10">Louie is an awesome dog! He's incredibly friendly and outgoing and would be a great addition to any family. Louie loves to go for walks and take trips to the park. Louie is the best!</textarea>
+			</div>
+			<div class="col-12">
+				<div class="anml-triangle"></div>
+				<div class="anml-hint">
+					<p><strong>TIP:</strong> Make the animal's bio as personable as possible. This is where the personality and quirks of the animal get to shine!</p>
+				</div>
+			</div>
+		</div><!--The basics end-->
+
+		<div class="row anml-box-filled"><!--The details begin-->
+			<div class="col-12 anml-box-header">
+				<h3>The Details</h3>
+			</div>
+			<div class="col-2 details">
+				<form class="anml-status">
+					Gender:<br>
+					<select name="gender">
+						<option value="male">
+							male
+						</option>
+						<option value="female">
+							female
+						</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-2 details">
+				<form class="anml-status">
+					Age:<br>
+					<select name="age">
+						<option value="adult">
+							adult
+						</option>
+						<option value="baby">
+							baby
+						</option>
+						<option value="young">
+							young
+						</option>
+						<option value="senior">
+							senior
+						</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-2 details">
+				<form class="anml-form">
+					<p style="color:#fff; font-size:16px;">Breed:</p><input style="margin-top:0px;" type="text" value="breed">
+				</form>
+			</div>
+			<div class="col-2 details">
+				<form class="anml-status">
+					Size:<br>
+					<select name="size">
+						<option value="large">
+							large
+						</option>
+						<option value="x-small">
+							x-small
+						</option>
+						<option value="small">
+							small
+						</option>
+						<option value="medium">
+							medium
+						</option>
+						<option value="x-large">
+							x-large
+						</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-2 details">
+				<form class="anml-status">
+					Spayed/Neutered:<br>
+					<select name="fixed">
+						<option value="yes">
+							yes
+						</option>
+						<option value="no">
+							no
+						</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-2">
+				<form class="anml-status">
+					Vaccinated:<br>
+					<select name="vaccinated">
+						<option value="yes">
+							yes
+						</option>
+						<option value="no">
+							no
+						</option>
+					</select>
+				</form>
+			</div>
+		</div><!--The details end-->
+
+		<div class="row anml-box"><!--Images-->
+			<div class="col-12 anml-box-header">
+				<h3>Add images of this animal</h3>
+				<div class="row">
+					<div class="col-12"><img class="img-placeholder" src="images/lou.jpg"></div>
+				</div>
+				<div class="row"><!--Image Uploader Start-->
+					<div class="col-6">
+						<div class="anml-box-popup">
+							<a class="anml-button-popup" href="#popup2">Make main image</a>
+						</div>
+						<div class="overlay" id="popup2">
+							<div class="anml-popup">
+								<h2>Main Image</h2><a class="close" href="#">&times;</a>
+								<div class="content">
+									Are you sure you want to make this the main image?
+									<div class="row">
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
+										</div>
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
+										</div>
+									</div>
+								</div><!--content close-->
+							</div><!--anml popup close-->
+						</div><!--popup id 2 close-->
+					</div>
+					<div class="col-6">
+						<div class="anml-box-popup">
+							<a class="anml-button-popup" href="#popup3">delete this image</a>
+						</div>
+						<div class="overlay" id="popup3">
+							<div class="anml-popup">
+								<h2>Delete</h2><a class="close" href="#">&times;</a>
+								<div class="content">
+									Are you sure you want to delete this image?
+									<div class="row">
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
+										</div>
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
+										</div>
+									</div>
+								</div><!--content close-->
+							</div><!--anml popup close-->
+						</div><!--popup id 3 close-->
+					</div>
+				</div><!--Image Uploader close-->
+
+				<div class="row">
+					<div class="col-12" style="margin-top:15px;">
+						<div class="anml-triangle"></div>
+						<div class="anml-hint">
+							<p><strong>TIP:</strong> Add as many high quality pictures as you can. The more pictures of the animal, the higher the chance of adoption.</p>
+						</div>
+					</div>
+				</div>
+
+        <div class="row" style="margin-top:30px;"><!--additional images row 1 begin-->
+          <div class="col-3-sm"><!--additional img 1-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/lou.jpg"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 2-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/lou2.jpg"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 3-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/lou3.jpg"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 4-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/lou4.jpg"></a>
+            </div>
+          </div>
+
+        </div><!--additional images row 1 end-->
+
+
+				<div class="row" style="margin-top:30px;"><!--additional images row 2 begin-->
+          <div class="col-3-sm"><!--additional img 5-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/add_anml.png"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 6-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/add_anml.png"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 7-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/add_anml.png"></a>
+            </div>
+          </div>
+          <div class="col-3-sm"><!--additional img 8-->
+            <div class="anml-box-popup">
+              <a class="anml-button-popup-img" href="#popup4"><img src="images/add_anml.png"></a>
+            </div>
+          </div>
+
+        </div><!--additional images row 2 end-->
+
+
+
+				<!--hidden image uploader for all images-->
+					<div class="overlay" id="popup4">
+						<div class="anml-popup">
+							<h2>Add an Image</h2><a class="close" href="#">&times;</a>
+							<div class="content">
+								<div class="col-8">
+									<p class="drag-drop">Drag and drop <br>an image</p>
+								</div>
+								<div class="col-4">
+									<div>
+											<input type='file'/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!--end hidden image uploader-->
+
+
+
+			</div>
+		</div><!--Image section end-->
+
+		<div class="row anml-box"><!--Special needs begin-->
+			<div class="col-12 anml-box-header">
+				<h3>Special Needs</h3>
+				<p class="row anml-instr">Check all that apply to this animal.
+					If the animal does not have any special needs, leave this section unmarked.</p>
+			</div>
+			<div class="row">
+				<div class="col-6"><!--deaf-->
+					<form class="anml-checkbox">
+					  <input type="checkbox" id="deaf" name="deaf" value="Deaf">
+					  <label for="deaf">Deaf</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+				<div class="col-6"><!--blind-->
+					<form class="anml-checkbox">
+					  <input type="checkbox" id="blind" name="blind" value="Blind">
+					  <label for="blind">Blind</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6"><!--mobility issues-->
+					<form class="anml-checkbox">
+						<input type="checkbox" id="mobility" name="mobility" value="Mobility Issues">
+						<label for="mobility">Mobility Issues</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+				<div class="col-6"><!--abuse history-->
+					<form class="anml-checkbox">
+						<input type="checkbox" id="abuse" name="abuse" value="Abuse History">
+						<label for="abuse">Abuse History</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6"><!--health issues-->
+					<form class="anml-checkbox">
+						<input type="checkbox" id="health" name="health" value="Health Issues">
+						<label for="health">Health Issues</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+				<div class="col-6"><!--other-->
+					<form class="anml-checkbox">
+						<input type="checkbox" id="other" name="other" value="Other">
+						<label for="other">Other</label>
+					</form>
+					<br>
+					<form class="anml-form" style="margin-top:-15px;">
+						<input type="text" value="details" style="margin-top:0px;">
+					</form>
+				</div>
+			</div>
+		</div><!--Special needs end-->
+
+		<div class="row anml-box"><!--Specifics begin-->
+			<div class="col-12 anml-box-header" >
+				<h3>The Specifics</h3>
+			</div>
+			<div class="row">
+				<div class="col-4 anml-specifics">
+						<h5>This animal would do best in an:</h5>
+						<form class="anml-checkbox" style="text-align:center;">
+							<input type="checkbox" id="apartment" name="apartment" value="Apartment">
+							<label for="apartment">Apartment</label>
+						</form>
+						<form class="anml-checkbox" style="text-align:center;">
+							<input type="checkbox" id="fence1" name="fence1" value="Home without a fenced yard">
+							<label for="fence1">Home without a fenced yard</label>
+						</form>
+						<form class="anml-checkbox" style="text-align:center;">
+							<input type="checkbox" id="fence2" name="fence2" value="Home with a fenced yard" checked>
+							<label for="fence2">Home with a fenced yard</label>
+						</form>
+				</div>
+				<div class="col-4 anml-specifics">
+					<h5>This animal is:</h5>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="children" name="children" value="Good with small children" checked>
+						<label for="children">Good with small children</label>
+					</form>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="cats" name="cats" value="Good with cats" checked>
+						<label for="cats">Good with cats</label>
+					</form>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="dogs" name="dogs" value="Good with dogs" checked>
+						<label for="dogs">Good with dogs</label>
+					</form>
+				</div>
+				<div class="col-4 anml-specifics">
+					<h5>This animal's grooming needs will be:</h5>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="Low" name="Low" value="Low maintenance">
+						<label for="Low">Low maintenance</label>
+					</form>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="Medium" name="Medium" value="Medium maintenance" checked>
+						<label for="Medium">Medium maintenance</label>
+					</form>
+					<form class="anml-checkbox" style="text-align:center;">
+						<input type="checkbox" id="High" name="High" value="High maintenance">
+						<label for="High">High maintenance</label>
+					</form>
+				</div>
+			</div>
+		</div><!--Specifics End-->
+
+		<div class="row anml-box"><!--Personality begin-->
+			<div class="col-12 anml-box-header">
+				<h3>Personality</h3>
+				<p class="anml-instr">Move the slider left and right to rate different characteristics of this animal's personality.<br>
+				If you're unsure what any of these traits mean, that's okay! Just hover over the name of the trait to learn more.<br><br>
+			Feel like you need to explain a little bit more about one of this animal's traits? Add details in the text boxes next to each personality trait.</p>
+				 <h4 style="margin-bottom: 40px;"><i>NOTE: 1 is the lowest value, and 5 is the highest value.</i></h4>
+			</div>
+
+			<div class="row personality" style="margin-top:120px;"><!--Confidence-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="How confident would you say this animal is? Confidence in this case could be defined as self-assurance and the ability of the animal to rely on itself for reassuracne.">Confidence</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+	  				<div class="slider">
+		  				<input type = "range" min="1" max="4" onchange="rangevalue.value=value"/>
+							<output id="rangevalue">4</output>
+	  				</div>
+  				</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">Louie is very confident!</textarea>
+				</div>
+			</div>
+
+			<div class="row personality"><!--affection-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="How affectionate is this animal? Does it like a lot of snuggling and attention?">Affection</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+						<div class="slider">
+							<input type = "range" min="4" max="5" onchange="rangevalue2.value=value"/>
+							<output id="rangevalue2">5</output>
+						</div>
+  				</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">Cuddle expert!</textarea>
+				</div>
+			</div>
+
+			<div class="row personality"><!--intelligence-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="How independent is this animal? Does it feel comfortable being on your own or does it often prefer the  company of others?">Independence</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+						<div class="slider">
+							<input type = "range" min="1" max="5" onchange="rangevalue3.value=value"/>
+							<output id="rangevalue3">3</output>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">details about this animal's level of independence</textarea>
+				</div>
+			</div>
+
+			<div class="row personality"><!--Energy Level-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="What is this animal's energy level? Is it constantly on the go or more of a slow mover?">Energy Level</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+						<div class="slider">
+							<input type = "range" min="1" max="5" onchange="rangevalue4.value=value"/>
+							<output id="rangevalue4"></output>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">details about this animal's energy level</textarea>
+				</div>
+			</div>
+
+			<div class="row personality"><!--training-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="How well trained is this animal? Does it know basic commands and have some level of obedience training?">Training</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+						<div class="slider">
+							<input type = "range" min="1" max="4" onchange="rangevalue5.value=value"/>
+							<output id="rangevalue5">4</output>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">The master of 'paw', 'sit' and 'stay'</textarea>
+				</div>
+			</div>
+
+			<div class="row personality"><!--intelligence-->
+				<div class="col-2 personality-trait">
+					<dfn data-info="Is this animal more of an Einstien or a Scooby Doo? Does this animal have the potential to learn?">Intelligence</dfn>
+				</div>
+				<div class="col-7">
+					<div class="personality-container">
+						<div class="slider">
+							<input type = "range" min="1" max="5" onchange="rangevalue6.value=value"/>
+							<output id="rangevalue6">3</output>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 anml-textbox">
+					<textarea cols="4" rows="4">details about this animal's level of intelligence</textarea>
+				</div>
+			</div>
+
+
+
+		</div><!--Personality end-->
+
+		<div class="row anml-box"><!--site visibility begin-->
+			<div class="col-12 anml-box-header">
+				<h3>Site Visibility</h3>
+				<p class="row anml-instr">This option allows you to choose whether or not to show this animal's profile on your site once it has been added. This is a great options for animals that are on a medical hold or still under behavorial observation.</p>
+			</div>
+			<div class="col-6">
+				<button class="anml-btn-short" type="button">Show profile on site</button>
+			</div>
+			<div class="col-6">
+				<button class="anml-btn-short" type="button">Hide profile on site</button>
+			</div>
+		</div><!--site visibility end-->
+
+		<div class="row"><!--add animal/cancel page begin-->
+			<div class="col-6">
+				<div class="anml-box-popup">
+					<a class="anml-button-popup" href="#addanml">Add this Animal</a>
+				</div>
+			</div>
+					<!--hidden add animal popup-->
+					<div class="overlay" id="addanml">
+						<div class="anml-popup">
+							<h2>Add Profile</h2><a class="close" href="#">&times;</a>
+							<div class="content">
+								Are you sure you want to add this animal profile?
+								<div class="row">
+									<div class="col-6">
+										<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
+									</div>
+									<div class="col-6">
+										<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end hidden add animal popup-->
+
+
+
+
+			<div class="col-6">
+					<div class="anml-box-popup">
+						<a class="anml-button-popup" href="#deleteanml">Cancel</a>
+					</div>
+						<!--hidden add animal popup-->
+						<div class="overlay" id="deleteanml">
+							<div class="anml-popup">
+								<h2>Are you sure you want to leave this page?</h2><a class="close" href="#">&times;</a>
+								<div class="content">
+									Information will not be saved.
+									<div class="row">
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="animals.html">Yes</a></button>
+										</div>
+										<div class="col-6">
+											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end hidden add animal popup-->
+
+				</div>
+		</div><!--add animal/cancel page end-->
+
+
+	</div><!--container div end-->
+
+
+
+	<div class="row" id="footer_animals"><!--footer begin-->
+		<div class="col-4" style="margin-top:60px;">
+			<a class="footer-text" href="#">About</a> <a class="footer-text" href="#">Contact</a> <a class="footer-text" href="#">Privacy</a> <a class="footer-text" href="#">Support</a>
+		</div>
+		<div class="col-4" style="margin-top:20px;"><img alt="Pet Proxy logo" src="images/pp_logo_white.png" style="width:40%; height=40%;"></div>
+		<div class="col-4" style="margin-top:50px;">
+			<svg class="social-media-anml" height="40" width="40"></svg> <svg class="social-media-anml" height="40" width="40"></svg> <svg class="social-media-anml" height="40" width="40"></svg>
+		</div>
+	</div><!--footer end-->
+
+</body>
+</html>

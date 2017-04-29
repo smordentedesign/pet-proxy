@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy-SJR.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,700,700i|Rancho|Sue+Ellen+Francisco" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/main-SJR.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-7">
+      <div class="home-search">
+         <input type="text" class="searchTerm" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-3">
+      <h3 class="welcome-text">Welcome, Stephanie!</h3>
+    </div>
+    <div class="col-2" style="margin-top:18px;">
+      <div class="sign-in-box-popup">
+        <a class="sign-in-button-popup" href="#signOut">Sign out</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+  <div class="col-12"  style="margin-top:30px; margin-bottom:20px;">
+      <h2 class="thin-text">S o u t h &nbsp J e r s e y &nbsp R e s c u e</h2>
+  </div>
+</div>
+
+
+  <div class="overlay" id="signOut">
+    <div class="sign-in-popup">
+      <h2>Sign Out</h2><a class="close" href="#">&times;</a>
+      <div class="row content">
+        <p>You are now signed out</p>
+          <div class="col-12">
+            <button class="sign-in-popup-btn" type="button"><a class="close-modal" href="#">Okay</a></button>
+          </div>
+      </div><!--content close-->
+    </div><!--anml popup close-->
+  </div><!--popup id 2 close-->
+
+
+
+  </div><!--header close-->
+
+  <div class="row"> <!--mobile nav-->
+
+    <div>
+      <div class="mobileWrap">
+      <a href="javascript:void(0);" id="toggleNav" class="toggle-btn" onclick="myFunction()">&#9776;</a>
+      <ul class="mobileNav">
+        <li style="border-bottom: 1px solid #00acd1;"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="about_us.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="adopt.html"><i class="fa fa-paw" aria-hidden="true"></i> Adopt</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="animals.html">view available animals</a></li>
+            <li style="background-color:#00acd1;"><a href="adopt.html">meet your match</a></li>
+            <li style="background-color:#00acd1;"><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i> Your Profile</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li style="background-color:#00acd1;"><a href="matches.html">your matches</a></li>
+            <li style="background-color:#00acd1;"><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="events.html"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+
+      </ul>
+      </div>
+    </div>
+  </div> <!--mobile nav close-->
+
+
+  <div class="row"> <!--desktop nav-->
+    <div>
+      <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about_us.html">about us</a>
+        </li>
+        <li><a href="adopt.html">adopt</a>
+          <ul>
+            <li><a href="animals.html">view available animals</a></li>
+            <li><a href="adopt.html">meet your match</a></li>
+            <li><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html">your profile</a>
+          <ul>
+            <li><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li><a href="matches.html">your matches</a></li>
+            <li><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">events</a></li>
+      </ul>
+
+    </div>
+
+  </div> <!--desktop nav close-->
+
+
+
+
+
+
+</div><!--container close-->
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 page-title">
+      <h2>Ready to Meet Your Match?</h2>
+      <p>Create a profile to find your perfectly matched pet.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 small-header-db">
+      <h4>General Information</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <form class="form-item">
+        First Name:
+        <input type="text" value="first name">
+      </form>
+      <form class="form-item">
+        Last Name:<br>
+        <input type="text" value="last name">
+      </form>
+      <form class="form-item">
+        Email Address:<br>
+        <input type="text" value="email address">
+      </form>
+    </div>
+
+    <div class="col-6">
+      <form class="form-item">
+        Address:<input type="text" value="address">
+      </form>
+
+      <form class="form-item">
+        Phone Number:<input type="text" value="phone number">
+      </form>
+
+        <div class="row">
+          <div class="col-8">
+            <form class="form-item">
+              City:<br>
+              <input type="text" value="city">
+            </form>
+          </div>
+          <div class="col-4">
+            <form class="form-item">
+              State:<br>
+              <select name="state">
+                <option value="DE">Delaware</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NY">New Tork</option>
+                <option value="PA">Pennsylvania</option>
+              </select>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 small-header-lb">
+      <h4>Animal Prefrences </h4>
+    </div>
+    <div class="col-12 instructions">
+      <p><i>Please check all that apply.</i></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 profile-q">
+      <p>Our rescue organization places cats and dogs. Which type of animal are you interested in?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="cats" name="cats" value="cats">
+        <label for="cats">cats</label>
+
+        <input type="checkbox" id="dogs" name="dogs" value="dogs">
+        <label for="dogs">dogs</label>
+
+        <input type="checkbox" id="both" name="both" value="both">
+        <label for="both">both</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>Do you have a gender preference?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="female" name="female" value="female">
+        <label for="female">female</label>
+
+        <input type="checkbox" id="male" name="male" value="male">
+        <label for="male">male</label>
+
+        <input type="checkbox" id="no prefrence" name="no prefrence" value="no prefrence">
+        <label for="no prefrence">no prefrence</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>Do you have an age preference?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="baby" name="baby" value="baby">
+        <label for="baby">baby</label>
+
+        <input type="checkbox" id="young" name="young" value="young">
+        <label for="young">young</label>
+
+        <input type="checkbox" id="adult" name="adult" value="adult">
+        <label for="adult">adult</label>
+
+        <input type="checkbox" id="senior" name="senior" value="senior">
+        <label for="senior">senior</label>
+
+        <input type="checkbox" id="no prefrence2" name="no prefrence2" value="no prefrence2">
+        <label for="no prefrence2">no prefrence</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>Do you have a size preference?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="x-small" name="x-small" value="x-small">
+        <label for="x-small">x-small</label>
+
+        <input type="checkbox" id="small" name="small" value="small">
+        <label for="small">small</label>
+
+        <input type="checkbox" id="medium" name="medium" value="medium">
+        <label for="medium">medium</label>
+
+        <input type="checkbox" id="large" name="large" value="large">
+        <label for="large">large</label>
+
+        <input type="checkbox" id="x-large" name="x-large" value="x-large">
+        <label for="x-large">x-large</label>
+
+        <input type="checkbox" id="no prefrence3" name="no prefrence3" value="no prefrence3">
+        <label for="no prefrence3">no prefrence</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>Would you adopt an animal with special needs?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="yes" name="yes" value="yes">
+        <label for="yes">yes</label>
+
+        <input type="checkbox" id="no" name="no" value="no">
+        <label for="no">no</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>If <strong>yes</strong>, which ones?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="deaf" name="deaf" value="deaf">
+        <label for="deaf">deaf</label>
+
+        <input type="checkbox" id="mobility" name="mobility" value="mobility">
+        <label for="mobility">mobility issues</label>
+
+        <input type="checkbox" id="abuse" name="abuse" value="abuse">
+        <label for="abuse">abuse issues</label>
+
+        <input type="checkbox" id="blind" name="blind" value="blind">
+        <label for="blind">blind</label>
+
+        <input type="checkbox" id="other" name="other" value="other">
+        <label for="other">other</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>What kind of grooming maintenance needs are you willing to keep up with?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="low" name="low" value="low">
+        <label for="low">low</label>
+
+        <input type="checkbox" id="medium" name="medium" value="medium">
+        <label for="medium">medium</label>
+
+        <input type="checkbox" id="high" name="high" value="high">
+        <label for="high">high</label>
+
+        <input type="checkbox" id="no prefrence4" name="no prefrence4" value="no prefrence4">
+        <label for="no prefrence4">no prefrence</label>
+      </div>
+      <div class="q-divider-inv">
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 small-header-db">
+      <h4>Current Living Situation</h4>
+    </div>
+    <div class="col-12 instructions">
+      <p><i>Tell us about your living situation.</i></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 profile-q">
+      <p>Do  you currently own or rent?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="own" name="own" value="own">
+        <label for="own">own</label>
+
+        <input type="checkbox" id="rent" name="rent" value="rent">
+        <label for="rent">rent</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-6 profile-q">
+      <p>Do you have a fenced yard?</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="yes1" name="yes1" value="yes1">
+        <label for="yes1">yes</label>
+
+        <input type="checkbox" id="no1" name="no1" value="no1">
+        <label for="no1">no</label>
+      </div>
+      <div class="q-divider">
+      </div>
+    </div>
+
+    <div class="col-12 profile-q">
+      <p>Type of residence:</p>
+      <div class="main-checkbox">
+        <input type="checkbox" id="single" name="single" value="single">
+        <label for="single">single family home</label>
+
+        <input type="checkbox" id="apartment" name="apartment" value="apartment">
+        <label for="apartment">apartment</label>
+
+        <input type="checkbox" id="townhome/condo" name="townhome/condo" value="townhome/condo">
+        <label for="townhome/condo">townhome/condo</label>
+
+        <input type="checkbox" id="mobile" name="mobile" value="mobile">
+        <label for="mobile">mobile home</label>
+      </div>
+      <div class="q-divider-inv">
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 small-header-lb">
+      <h4>Current Pet Information</h4>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12 small-header-db">
+      <h4>Your Personality</h4>
+    </div>
+    <div class="col-12 instructions">
+      <p><i>Move the markers up and down to show how strongly
+        each one of these traits represents you.<br>
+        If you're unsure what any of these traits mean, that's okay!
+        Just hover over the name of the trait to learn more.</i></p>
+        <h4 style="margin-bottom: 40px;"><i>NOTE: 1 is the lowest value, and 5 is the highest value.</i></h4>
+    </div>
+  </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Confidence-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="How confident would you say you are?
+        Confidence in this case could be defined as self-assurance
+        and the ability to rely on yourself.">Confidence</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue.value=value"/>
+            <output id="rangevalue"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Affection-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="How affectionate are you?
+        Do you prefer an animal that likes a lot of snuggling
+        and attention?">Affection</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue1.value=value"/>
+            <output id="rangevalue1"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Independence-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="How independent are you?
+        Do you often feel comfortable being on your own or do you
+        often prefer the validation and company of others?">Independence</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue2.value=value"/>
+            <output id="rangevalue2"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Energy Level-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="What is your energy level? Are you
+        constantly on the go or more of a slow mover?">Energy Level</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue3.value=value"/>
+            <output id="rangevalue3"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Patience-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="How patient can you be? Are you easily frustrated or do you have nerves of steel?">Patience</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue4.value=value"/>
+            <output id="rangevalue4"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row personality" style="margin-top:10px;"><!--Activity Level-->
+      <div class="col-4 personality-trait">
+        <dfn data-info="How active are you? Are you more of an exercise junkie or a couch potato?">Activity Level</dfn>
+      </div>
+      <div class="col-8">
+        <div class="personality-container">
+          <div class="slider">
+            <input type = "range" min="1" max="5" onchange="rangevalue5.value=value"/>
+            <output id="rangevalue5"></output>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button class="db-btn" type="button" style="margin-bottom:60px; margin-top:60px;"><a href="matches.html">Save and show me my matches!</a></button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!--container div close-->
+
+
+
+
+
+<div class="container footer">
+
+  <div class="row">
+    <div class="col-12 footer-info">
+      <h3>South Jersey Rescue</h3>
+    </div>
+    <div class="col-4 footer-info">
+      <h6>Shelter Location</h6>
+      <p>71 Willow Street<br>
+        Collingswood, NJ<br>
+        08108
+      </p>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Site Navigation</h6>
+      <div class="col-6">
+        <p>Home<br>
+          About Us<br>
+          Your Profile<br>
+          Events
+        </p>
+      </div>
+      <div class="col-6">
+        <p>Volunteer<br>
+          Donate<br>
+          Contact Us<br>
+          Directions
+        </p>
+      </div>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Connect With Us</h6>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

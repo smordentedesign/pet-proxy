@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy-SJR.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,700,700i|Rancho|Sue+Ellen+Francisco" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/main-SJR.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-7">
+      <div class="home-search">
+         <input type="text" class="searchTerm" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-3">
+      <h3 class="welcome-text">Welcome, Stephanie!</h3>
+    </div>
+    <div class="col-2" style="margin-top:18px;">
+      <div class="sign-in-box-popup">
+        <a class="sign-in-button-popup" href="#signOut">Sign out</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+  <div class="col-12"  style="margin-top:30px; margin-bottom:20px;">
+      <h2 class="thin-text">S o u t h &nbsp J e r s e y &nbsp R e s c u e</h2>
+  </div>
+</div>
+
+
+  <div class="overlay" id="signOut">
+    <div class="sign-in-popup">
+      <h2>Sign Out</h2><a class="close" href="#">&times;</a>
+      <div class="row content">
+        <p>You are now signed out</p>
+          <div class="col-12">
+            <button class="sign-in-popup-btn" type="button"><a class="close-modal" href="#">Okay</a></button>
+          </div>
+      </div><!--content close-->
+    </div><!--anml popup close-->
+  </div><!--popup id 2 close-->
+
+
+
+  </div><!--header close-->
+
+  <div class="row"> <!--mobile nav-->
+
+    <div>
+      <div class="mobileWrap">
+      <a href="javascript:void(0);" id="toggleNav" class="toggle-btn" onclick="myFunction()">&#9776;</a>
+      <ul class="mobileNav">
+        <li style="border-bottom: 1px solid #00acd1;"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="about_us.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="adopt.html"><i class="fa fa-paw" aria-hidden="true"></i> Adopt</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="animals.html">view available animals</a></li>
+            <li style="background-color:#00acd1;"><a href="adopt.html">meet your match</a></li>
+            <li style="background-color:#00acd1;"><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i> Your Profile</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li style="background-color:#00acd1;"><a href="matches.html">your matches</a></li>
+            <li style="background-color:#00acd1;"><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="events.html"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+
+      </ul>
+      </div>
+    </div>
+  </div> <!--mobile nav close-->
+
+
+  <div class="row"> <!--desktop nav-->
+    <div>
+      <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about_us.html">about us</a>
+        </li>
+        <li><a href="adopt.html">adopt</a>
+          <ul>
+            <li><a href="animals.html">view available animals</a></li>
+            <li><a href="adopt.html">meet your match</a></li>
+            <li><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html">your profile</a>
+          <ul>
+            <li><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li><a href="matches.html">your matches</a></li>
+            <li><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">events</a></li>
+      </ul>
+
+    </div>
+
+  </div> <!--desktop nav close-->
+
+</div><!--container close-->
+
+
+
+
+
+<div class="container">
+
+  <div class="row section-volunteer">
+
+    <div class="col-6">
+      <img src="images/volunteer.jpg" class="volunteer-images">
+
+    </div>
+
+    <div class="col-6 volunteer-info">
+      <h2>Volunteer Info</h2>
+      <p>volunteer info</p>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 small-header-lb">
+      <h4>On Site Volunteering</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 volunteer-info-desc">
+      <h4>Time Commitment:</h4>
+      <p>Volunteers are required to attend an orientation.</p>
+
+      <h4>New Volunteers:</h4>
+      <p>Beginning September 1st, 2016 all volunteers will
+        have the option to purchase a "Volunteer Starter Kit" for $10.
+        The kit will contain an South Jersey Rescue Volunteer t-shirt
+        and an ID badge. Volunteer t-shirts for $7 and ID badges for
+        $5 are also available separately. This covers South Jersey
+        Rescue's cost only. T-shirts are optional,  ID badges are
+        required and are to be worn by ALL volunteers while volunteering
+        at South Jersey Rescue.  ID badges identify volunteers by name
+        and reflect the completed levels of training. Please bring
+        cash or a check with you at the time of Orientation to purchase
+        these items.</p>
+
+      <h4>Current South Jersey Rescue volunteers:</h4>
+      <p>Volunteers have the option of purchasing a volunteer
+        tee shirt for $7. Replacement ID badges are $3. Volunteers
+        MUST have an ID badge on while volunteering at South Jersey
+        Rescue. E-mail volunteers at SJRNJ.org if you
+        would like to purchase a volunteer shirt or need
+        a replacement badge.</p>
+    </div>
+
+    <div class="col-6 volunteer-info-desc">
+      <h4>Children and on-site volunteering:</h4>
+      <p>Those who are 16 or 17 years old may volunteer independently
+        with written consent from a parent. Volunteers aged 12-15
+        may volunteer with a parent or guardian present at all times
+        who also attended orientation. Children younger than 12 may
+        become involved through Humane Education, attending our
+        Summer Camp, or by soliciting donations in our Trash to
+        Treasure program.</p>
+
+      <h4>How to get started:</h4>
+      <p>South Jersey Rescue has two applications available
+        for volunteers that wish to volunteer on-site;
+        one for Junior Volunteers and one for volunteers
+        aged 16 years and up.</p>
+
+        <div class="row" style="margin-bottom:20px;">
+          <div class="col-6">
+            <button type="button" class="lb-btn" style="margin-top:25px;">volunteers 12-15 yrs</button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="lb-btn" style="margin-top:25px;">volunteers 16 yrs +</button>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 small-header-db">
+      <h4>Special Event Volunteering</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 volunteer-info-desc">
+      <h4>Volunteers assist in 4 main areas:</h4>
+      <ul>
+        <li>Fairs and festivals</li>
+        <li>Pet therapy</li>
+        <li>Tabling and small events</li>
+        <li>Third party fundraising</li>
+      </ul>
+
+      <p>Large special events include our annual
+        Paws and Feet 5k run and doggy fun day,
+        Yappy Hour pet socials, our online auction
+        and our 50/50 raffle.</p>
+
+    </div>
+
+    <div class="col-6 volunteer-info-desc">
+      <h4>How to get started as a community outreach volunteer:</h4>
+      <p>Fill out the Community Outreach Volunteer Application.</p>
+      <button type="button" class="lb-btn" style="margin-top:25px;">outreach volunteer form</button>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div> <!--container div close-->
+
+
+
+
+
+<div class="container footer">
+
+  <div class="row">
+    <div class="col-12 footer-info">
+      <h3>South Jersey Rescue</h3>
+    </div>
+    <div class="col-4 footer-info">
+      <h6>Shelter Location</h6>
+      <p>71 Willow Street<br>
+        Collingswood, NJ<br>
+        08108
+      </p>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Site Navigation</h6>
+      <div class="col-6">
+        <p>Home<br>
+          About Us<br>
+          Your Profile<br>
+          Events
+        </p>
+      </div>
+      <div class="col-6">
+        <p>Volunteer<br>
+          Donate<br>
+          Contact Us<br>
+          Directions
+        </p>
+      </div>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Connect With Us</h6>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

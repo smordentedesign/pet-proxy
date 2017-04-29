@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
+
+<body>
+
+
+  <div class="row">
+    <div class="col-12">
+      <img src="images/pp_logo.png" style="width:25%; height=25%;" alt="Pet Proxy logo"/>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col-3 MAINnavItem1"><a href="dashboard.html">About</a></div>
+      <div class="col-3 MAINnavItem2"><a href="animals.html">Pricing</a></div>
+      <div class="col-3 MAINnavItem3"><a href="adoptions.html">Contact Us</a></div>
+      <div class="col-3 MAINnavItem4"><a href="website.html">Sign In</a></div>
+  </div>
+
+<div class="row">
+  <div class="col-12">
+    <h2>Sign Up Basics</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="hintBoxLB">
+      <p>Tell us a little bit about your organization!</p>
+    </div>
+  </div>
+  <div class="col-9 sign-up-sect">
+
+      <div class="row">
+        <div class="col-12 m-header">
+          <h4>Organization Information</h4>
+          <p>Please tell us about your organization.</p>
+        </div>
+      </div>
+
+      <div class="row info">
+        <div class="col-12 info-sect">
+          <form style="width:100%;">
+            Organization's Name:<br>
+            <input type="text" >
+          </form>
+        </div>
+      </div>
+
+      <div class="row info">
+        <div class="col-5 info-sect">
+          <form>
+            Mailing Address:
+            <input type="text">
+          </form>
+        </div>
+
+        <div class="col-5 info-sect">
+          <form>
+            City:
+            <input type="text">
+          </form>
+        </div>
+
+        <div class="col-2 info-sect">
+          <form>
+          State:
+            <select type="text" name="Language">
+              <option type="text" value="de">Delaware</option>
+              <option type="text" value="nj">New Jersey</option>
+              <option type="text" value="ny">New York</option>
+              <option type="text" value="pa">Pennsylvania</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <div class="row info">
+        <div class="col-2 info-sect">
+          <form style="width:80%;">
+            Zip:
+            <input type="text">
+          </form>
+        </div>
+
+        <div class="col-6 info-sect">
+          <form>
+            Organization Email:
+            <input type="text">
+          </form>
+        </div>
+
+        <div class="col-4 info-sect">
+          <form>
+            Phone Number:
+            <input type="text">
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="row" style="margin-top:20px;">
+  <div class="col-3">
+    <div class="hintBoxLB">
+      <p>Who should we contact?</p>
+    </div>
+  </div>
+  <div class="col-9 sign-up-sect">
+
+      <div class="row">
+        <div class="col-12 m-header">
+          <h4>Contact Person's Information</h4>
+          <p>Who is the owner or main contact
+            person for this organization? Please enter
+            their information below. </p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-6 info-sect">
+          <form>
+            First Name:
+            <input type="text">
+          </form>
+        </div>
+        <div class="col-6 info-sect">
+          <form>
+            Last Name:
+            <input type="text">
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 info-sect">
+          <form style="width:100%;">
+            Contact Person's Title:
+            <input type="text">
+          </form>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+<div class="row" style="margin-top:20px;">
+  <div class="col-3">
+    <div class="hintBoxLB">
+      <p>Who do you rescue?</p>
+    </div>
+  </div>
+  <div class="col-9 sign-up-sect">
+
+      <div class="row">
+
+        <div class="col-12 m-header">
+          <h4>Animal Information</h4>
+          <p>Let us know what type of animal(s) your
+          organization rescues. This allows us to
+          build your PetProxy system to fit you.</p>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-12">
+          <form class="marketing-checkbox">
+            <p style="font-size:16px; text-align:center;">Types of animals your organization places:</p>
+
+            <div class="col-3">
+            <input type="checkbox" id="cats" name="cats" value="cats">
+            <label for="cats">cats</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="dogs" name="dogs" value="dogs">
+            <label for="dogs">dogs</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="reptiles" name="reptiles" value="reptiles">
+            <label for="reptiles">reptiles</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="fish" name="fish" value="fish">
+            <label for="fish">fish</label>
+            </div>
+          </form>
+        </div>
+        <div class="col-12">
+          <form class="marketing-checkbox">
+            <div class="col-3">
+            <input type="checkbox" id="rabbits" name="rabbits" value="rabbits">
+            <label for="rabbits">rabbits</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="birds" name="birds" value="birds">
+            <label for="birds">birds</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="barnyard" name="barnyard" value="barnyard">
+            <label for="barnyard">barnyard</label>
+            </div>
+            <div class="col-3">
+            <input type="checkbox" id="other" name="other" value="other">
+            <label for="other">other</label>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+      <div class="row" style="margin-top:40px;">
+
+        <div class="col-6 info-sect">
+          <form>
+          About how many animals does your shelter or organization
+          <strong>take in</strong> a year?
+            <select type="text" name="Language">
+              <option type="text">Annual animal intake</option>
+              <option type="text">1-100</option>
+              <option type="text">101-300</option>
+              <option type="text">301-500</option>
+              <option type="text">501-700</option>
+              <option type="text">701+</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="col-6 info-sect">
+          <form>
+          About how many animals does your shelter or organization
+          <strong>find homes for</strong> in a year?
+            <select type="text" name="Language">
+              <option type="text">Annual animal adoptions</option>
+              <option type="text">1-100</option>
+              <option type="text">101-300</option>
+              <option type="text">301-500</option>
+              <option type="text">501-700</option>
+              <option type="text">701+</option>
+            </select>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-6 info-sect">
+          <p class="fee-header">Dog Fees</p>
+          <form style="width:50%;">
+            <input type="text" value="amount">
+          </form>
+          <div class="text-desc">
+            <p>Fees include:</p>
+          <textarea rows="4" cols="50">fees cover..</textarea>
+          </div>
+        </div>
+
+        <div class="col-6 info-sect">
+          <p class="fee-header">Cat Fees</p>
+          <form style="width:50%;">
+            <input type="text" value="amount">
+          </form>
+          <div class="text-desc">
+            <p>Fees include:</p>
+          <textarea rows="4" cols="50">fees cover..</textarea>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <button type="button" class="m-btn-db" style="margin:0 auto; margin-top:80px; margin-bottom:60px; height:60px;"><a href="sign_up_specifics.html" style=" font-size:20px;">Next</a></button>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row footer">
+  <div class="col-4" style="margin-top:50px;">
+    <a class="footer-text" href="#">About</a>
+    <a class="footer-text" href="#">Contact</a>
+    <a class="footer-text" href="#">Privacy</a>
+    <a class="footer-text" href="#">Support</a>
+  </div>
+  <div class="col-4" style="margin-top:30px;">
+    <img src="images/pp_logo_horz_white.png"  style="width:200px;" alt="Pet Proxy logo"/>
+  </div>
+  <div class="col-4" style="margin-top:40px;">
+    <svg class="social-media" height="40" width="40">
+    </svg>
+    <svg class="social-media" height="40" width="40">
+    </svg>
+    <svg class="social-media" height="40" width="40">
+    </svg>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy-SJR.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,300,300i,400,400i,600,700" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/main-SJR.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+
+
+  <div class="row" style="margin-top:20px;">
+    <div class="col-6" style="margin-top:20px; margin-bottom:20px;">
+      <form style="margin:0 auto;  text-align:center;">
+        <input class="main-search" type="text" value="search" style="border:1px solid #00ACD1; color:#D3D3D3; text-align:center;">
+      </form>
+    </div>
+
+    <div class="col-6" style="margin-top:20px;">
+      <div class="col-6-sm">
+        <div class="sign-in-box-popup">
+          <a class="sign-in-button-popup" href="#signIn">Sign In</a>
+        </div>
+      </div>
+      <div class="col-6-sm">
+        <div class="sign-in-box-popup">
+          <a class="sign-in-button-popup" href="#signUp">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="overlay" id="signIn">
+      <div class="sign-in-popup">
+        <h2>Sign In</h2><a class="close" href="#">&times;</a>
+        <div class="row content">
+            <div class="col-12">
+              <input type="text" value="username">
+              <input type="text" value="password">
+            </div>
+            <div class="col-12">
+              <button class="sign-in-popup-btn" type="button"><a class="close-modal" href="#">Sign In</a></button>
+            </div>
+            <div class="col-6">
+              <p>Forgot Username?</p>
+            </div>
+            <div class="col-6">
+              <p href="#">Forgot Username?</p>
+            </div>
+        </div><!--content close-->
+      </div><!--anml popup close-->
+    </div><!--popup id 2 close-->
+
+    <div class="overlay" id="signUp">
+      <div class="sign-in-popup">
+        <h2>Create an account</h2><a class="close" href="#">&times;</a>
+        <div class="row content">
+            <div class="col-12">
+              <input type="text" value="username">
+              <input type="text" value="password">
+              <input type="text" value="confirm password">
+              <form class="sign-up-checkbox">
+              <input type="checkbox" id="dogs" name="dogs" value="dogs">
+              <label for="dogs">I accept SJR's Terms and Conditions</label>
+              </form>
+            </div>
+            <div class="col-12">
+              <button class="sign-in-popup-btn" type="button"><a href="create_profile.html">Create Account!</a></button>
+            </div>
+            <div class="col-6">
+              <p>Forgot Username?</p>
+            </div>
+            <div class="col-6">
+              <p>Forgot Username?</p>
+            </div>
+        </div><!--content close-->
+      </div><!--anml popup close-->
+    </div><!--popup id 2 close-->
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h2 class="thin-text" style="margin-top:20px;">S o u t h &nbsp J e r s e y &nbsp R e s c u e</h2>
+    </div>
+  </div>
+
+
+
+  <div class="row"> <!--mobile nav-->
+
+    <div>
+      <div class="mobileWrap">
+      <a href="javascript:void(0);" id="toggleNav" class="toggle-btn" onclick="myFunction()">&#9776;</a>
+      <ul class="mobileNav">
+        <li style="border-bottom: 1px solid #00acd1;"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="about_us.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="adopt.html"><i class="fa fa-paw" aria-hidden="true"></i> Adopt</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="animals.html">view available animals</a></li>
+            <li style="background-color:#00acd1;"><a href="adopt.html">meet your match</a></li>
+            <li style="background-color:#00acd1;"><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i> Your Profile</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li style="background-color:#00acd1;"><a href="matches.html">your matches</a></li>
+            <li style="background-color:#00acd1;"><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="events.html"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+
+      </ul>
+      </div>
+    </div>
+  </div> <!--mobile nav close-->
+
+
+  <div class="row"> <!--desktop nav-->
+    <div>
+      <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about_us.html">about us</a>
+        </li>
+        <li><a href="adopt.html">adopt</a>
+          <ul>
+            <li><a href="animals.html">view available animals</a></li>
+            <li><a href="adopt.html">meet your match</a></li>
+            <li><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html">your profile</a>
+          <ul>
+            <li><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li><a href="matches.html">your matches</a></li>
+            <li><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">events</a></li>
+      </ul>
+
+    </div>
+
+  </div> <!--desktop nav close-->
+
+
+
+  <div class="row home-banner">
+    <div class="col-6 spacer">
+      <p> &nbsp</p>
+    </div>
+    <div class="col-6">
+      <img src="images/SJR_logo.png" class="sjr-logo-home">
+      <p style="width:200px; text-align:center; margin: 0 auto;">With more love than resources,  South Jersey Rescue began
+        its journey more than fifteen years ago. Our commitment to
+        give our "furry friends" a second chance by building relationships
+        built on love, trust, and respect is on going.</p>
+        <button type="button" class="db-btn" style="margin-top:25px;"><a href="adopt.html">learn more about our process</a></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 home-banner2">
+      <button type="button" class="db-btn" style="margin-top:41%;"><a href="adopt.html">Meet Your Match</a></button>
+    </div>
+    <div class="col-6 home-banner3">
+      <button type="button" class="db-btn" style="margin-top:41%;"><a href="animals.html">Check out our animals!</a></button>
+    </div>
+  </div>
+
+
+
+
+</div><!--container close-->
+
+<div class="container footer">
+
+  <div class="row">
+    <div class="col-12 footer-info">
+      <h3>South Jersey Rescue</h3>
+    </div>
+    <div class="col-4-sm footer-info">
+      <h6>Shelter Location</h6>
+      <p>71 Willow Street<br>
+        Collingswood, NJ<br>
+        08108
+      </p>
+    </div>
+
+    <div class="col-4-sm footer-info">
+      <h6>Site Navigation</h6>
+      <div class="col-6-sm">
+        <p>Home<br><br>
+          About Us<br><br>
+          Your Profile<br><br>
+          Events
+        </p>
+      </div>
+      <div class="col-6-sm">
+        <p>Volunteer<br><br>
+          Donate<br><br>
+          Contact Us<br><br>
+          Directions
+        </p>
+      </div>
+    </div>
+
+    <div class="col-4-sm footer-info">
+      <h6>Connect With Us</h6>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="powered-PP">
+      <p>This site is powered by</p>
+      <a href=""><img src="images/pp_logo_horz_white.png"></a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://4t4nli.axshare.com/#p=adopt -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>adopt</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link type="text/css" href="./website_files/reset.css" rel="Stylesheet">
+    <link type="text/css" href="./website_files/default.css" rel="Stylesheet">
+
+    <script type="text/javascript">
+        AXSHARE_HOST_URL = 'http://share.axure.com';
+        AXSHARE_HOST_SECURE_URL = 'https://share.axure.com';
+</script><script type="text/javascript">
+        if (location.href.toString().indexOf('file://localhost/') == 0) {
+            location.href = location.href.toString().replace('file://localhost/', 'file:///');
+        }
+    </script>
+
+    <script type="text/javascript" src="./website_files/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./website_files/splitter.js"></script>
+    <script type="text/javascript" src="./website_files/axutils.js"></script>
+    <script type="text/javascript" src="./website_files/axplayer.js"></script>
+    <script type="text/javascript" src="./website_files/messagecenter.js"></script>
+    <script type="text/javascript" src="./website_files/document.js"></script>
+    <style type="text/css">
+
+#outerContainer {
+	width:1000px;
+	height:1500px;
+}
+
+.vsplitbar {
+	width: 3px;
+	background: #B9B9B9;
+}
+
+#rightPanel {
+    background-color: White;
+}
+
+#leftPanel {
+    /*min-width: 190px;*/
+}
+
+.splitterMask {
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   background-image: url(resources/images/transparent.gif);
+   z-index: 20000;
+}
+
+
+    </style>
+    <script type="text/javascript" language="JavaScript"><!--
+        // isolate scope
+        (function() {
+            setUpController();
+
+            var configuration = $axure.document.configuration;
+            var _settings = {};
+            _settings.projectId = '4T4NLI';
+            _settings.isAxshare = configuration.isAxshare;
+            _settings.loadFeedbackPlugin = configuration.loadFeedbackPlugin;
+            _settings.startCollapsed = HashString("c") == "1";
+            if(HashString("c") == "2") closePlayer();
+
+            $axure.player.settings = _settings;
+
+            $(window).bind('load', function() {
+                if(CHROME_5_LOCAL && !$('body').attr('pluginDetected')) {
+                    window.location = 'resources/chrome/chrome.html';
+                }
+            });
+
+            $(document).ready(function() {
+                $axure.page.bind('load.start', mainFrame_onload);
+                $axure.messageCenter.addMessageListener(messageCenter_message);
+
+                if($axure.player.settings.loadFeedbackPlugin) {
+                    if($axure.player.settings.isAxshare) {
+                        $axure.utils.loadJS('/Scripts/plugins/feedback/feedback.js');
+                    } else {
+                        $axure.utils.loadJS('http://share.axure.com/Scripts/plugins/feedback/feedback.js');
+                    }
+                }
+
+                if(navigator.userAgent.indexOf("MSIE") >= 0) $('#outerContainer').width('100%');
+                initialize();
+                if($axure.player.settings.startCollapsed) $('#outerContainer').splitter({ sizeLeft: 0 });
+                else $('#outerContainer').splitter({ sizeLeft: 250 });
+                $('#leftPanel').width(250);
+
+                $(window).resize(function() { resizeContent(); });
+
+                $('#maximizePanelContainer').hide();
+
+                initializeLogo();
+
+                $(window).resize();
+                resizeContent();
+                //wait for ie to get to a good state and resize
+                if(IE && BROWSER_VERSION == "6.0") setTimeout(function() { $('#outerContainer').trigger('resize'); }, 30);
+
+                if($axure.player.settings.startCollapsed) {
+                    collapse();
+                    $('#leftPanel').width(0);
+                }
+            });
+        })();
+
+        var lastLeftPanelWidth = 250;
+
+        function messageCenter_message(message, data) {
+            if(message == 'expandFrame') expand();
+        }
+
+        function resizeContent() {
+            var newHeight = $(window).height();
+            var newWidth = $(window).width();
+
+            var controlContainerHeight = newHeight - 42;
+            if($('#interfaceControlFrameLogoContainer').is(':visible')) controlContainerHeight -= $('#interfaceControlFrameLogoContainer').height() + 16;
+
+            $('#outerContainer').height(newHeight).width(newWidth);
+            $('.vsplitbar').height(newHeight);
+            $('#leftPanel').height(newHeight);
+            $('#interfaceControlFrame').height(newHeight);
+            $('#interfaceControlFrameContainer').height(controlContainerHeight);
+
+            $('#rightPanel').height(newHeight);
+            $('#mainFrame').height(newHeight);
+
+            if($('#leftPanel').is(':visible')) $('#rightPanel').width($(window).width() - $('#leftPanel').width() - $('.vsplitbar').width());
+            else $('#rightPanel').width($(window).width());
+        }
+
+        function closePlayer() {
+            if($axure.page.location) window.location.href = $axure.page.location;
+            else {
+                var pageFile = getInitialUrl();
+                var currentLocation = window.location.toString();
+                window.location.href = currentLocation.substr(0, currentLocation.lastIndexOf("/") + 1) + pageFile;
+            }
+        }
+
+        function replaceHash(newHash) {
+            var currentLocWithoutHash = window.location.toString().split('#')[0];
+
+            //We use replace so that every hash change doesn't get appended to the history stack.
+            //We use replaceState in browsers that support it, else replace the location
+            if(typeof window.history.replaceState != 'undefined') {
+                try {
+                    //Chrome 45 (Version 45.0.2454.85 m) started throwing an error here when generated locally (this only happens with sitemap open) which broke all interactions.
+                    //try catch breaks the url adjusting nicely when the sitemap is open, but all interactions and forward and back buttons work.
+                    //Uncaught SecurityError: Failed to execute 'replaceState' on 'History': A history state object with URL 'file:///C:/Users/Ian/Documents/Axure/HTML/Untitled/start.html#p=home' cannot be created in a document with origin 'null'.
+                    window.history.replaceState(null, null, currentLocWithoutHash + newHash);
+                } catch(ex) {}
+            } else {
+                window.location.replace(currentLocWithoutHash + newHash);
+            }
+        }
+
+        function collapse() {
+            var currentHash = window.location.hash;
+            //If the collapse hash string var isn't present and set to 1, insert it
+            if (currentHash.indexOf('#c=1') == -1 && currentHash.indexOf('&c=1') == -1) {
+                var hashToSet = '';
+
+                var varIndex = currentHash.indexOf('#c=');
+                if (varIndex == -1) varIndex = currentHash.indexOf('&c=');
+                if (varIndex != -1) {
+                    var newHash = currentHash.substring(0, varIndex);
+
+                    newHash = newHash == '' ? '#c=1' : newHash + '&c=1';
+
+                    var ampIndex = currentHash.indexOf('&', varIndex + 1);
+                    if (ampIndex != -1) {
+                        newHash = newHash + currentHash.substring(ampIndex);
+                    }
+                    hashToSet = newHash;
+                } else if (currentHash.indexOf('#') != -1) {
+                    hashToSet = currentHash + '&c=1';
+                } else {
+                    hashToSet = '#c=1';
+                }
+
+                if (hashToSet != '') {
+                    replaceHash(hashToSet);
+                }
+            }
+
+            $('#maximizePanelContainer').show();
+            lastLeftPanelWidth = $('#leftPanel').width();
+            $('#leftPanel').hide();
+            $('.vsplitbar').hide();
+            $('#rightPanel').width($(window).width());
+            $(window).resize();
+            $('#outerContainer').trigger('resize');
+        }
+
+        function expand() {
+            var currentHash = self.location.hash;
+            var varIndex = currentHash.indexOf('&c=');
+            if (varIndex == -1) varIndex = currentHash.indexOf('#c=');
+            //If the collapse hash string var is present, remove it
+            if (varIndex != -1) {
+                var newHash = currentHash.substring(0, varIndex);
+
+                var ampIndex = currentHash.indexOf('&', varIndex + 1);
+                if (ampIndex != -1) {
+                    newHash = newHash == '' ? '#' + currentHash.substring(ampIndex + 1) : newHash + currentHash.substring(ampIndex);
+                }
+
+                replaceHash(newHash);
+            }
+
+            $('#maximizePanelContainer').hide();
+            $('#leftPanel').width(lastLeftPanelWidth);
+            $('#leftPanel').show();
+            $('.vsplitbar').show();
+            $('#rightPanel').width($(window).width() - $('#leftPanel').width() - $('.vsplitbar').width());
+            $(window).resize();
+            $('#outerContainer').trigger('resize');
+        }
+
+        function initialize() {
+            var legacyQString = QueryString("Page");
+            if (legacyQString.length > 0) {
+                location.href = location.href.substring(0, location.href.indexOf("?")) + "#p=" + legacyQString;
+                return;
+            }
+
+            var mainFrame = document.getElementById("mainFrame");
+            mainFrame.contentWindow.location.href = getInitialUrl();
+        }
+        
+        function getInitialUrl() {
+            var pageName = HashString("p");
+            if(pageName.length > 0) return pageName + ".html";
+            else {
+                var url = getFirstPageUrl($axure.document.sitemap.rootNodes);
+                return (url ? url : "about:blank");
+            }
+        }
+
+        function getFirstPageUrl(nodes) {
+            for (var i = 0; i < nodes.length; i++) {
+                var node = nodes[i];
+                if (node.url) return node.url;
+                else {
+                    var hasChildren = (node.children && node.children.length > 0);
+                    if (hasChildren) {
+                        var url = getFirstPageUrl(node.children);
+                        if (url) return url;
+                    }
+                }
+            }
+            return null;
+        }
+
+        function initializeLogo() {
+            if($axure.document.configuration.logoImagePath) {
+                $('#interfaceControlFrameLogoImageContainer').html('<img id="logoImage" src="" />');
+                $('#logoImage').attr('src', $axure.document.configuration.logoImagePath).load(function() { resizeContent(); });
+                $('#interfaceControlFrameMinimizeContainer').css('background-color', '#FFFFFF');
+            } else $('#interfaceControlFrameLogoImageContainer').hide();
+
+            if ($axure.document.configuration.logoImageCaption) {
+                $('#interfaceControlFrameLogoCaptionContainer').html($axure.document.configuration.logoImageCaption);
+                $('#interfaceControlFrameMinimizeContainer').css('background-color', '#FFFFFF');
+            } else $('#interfaceControlFrameLogoCaptionContainer').hide();
+
+            if(!$('#interfaceControlFrameLogoImageContainer').is(':visible') && !$('#interfaceControlFrameLogoCaptionContainer').is(':visible')) {
+                $('#interfaceControlFrameLogoContainer').hide();
+            }
+        }
+
+        function mainFrame_onload() {
+            if($axure.page.pageName) document.title = $axure.page.pageName;
+        }
+
+        function QueryString(query) {
+            var qstring = self.location.href.split("?");
+            if(qstring.length < 2) return "";
+            return GetParameter(qstring, query);
+        }
+        
+        function GetParameter(qstring, query) {
+            var prms = qstring[1].split("&");
+            var frmelements = new Array();
+            var currprmeter, querystr = "";
+
+            for(var i = 0; i < prms.length; i++) {
+                currprmeter = prms[i].split("=");
+                frmelements[i] = new Array();
+                frmelements[i][0] = currprmeter[0];
+                frmelements[i][1] = currprmeter[1];
+            }
+
+            for(j = 0; j < frmelements.length; j++) {
+                if(frmelements[j][0].toLowerCase() == query.toLowerCase()) {
+                    querystr = frmelements[j][1];
+                    break;
+                }
+            }
+            return querystr;
+        }
+        
+        function HashString(query) {
+            var qstring = self.location.href.split("#");
+            if(qstring.length < 2) return "";
+            return GetParameter(qstring, query);
+        }
+
+    --></script>
+
+    <link type="text/css" rel="Stylesheet" href="./website_files/sitemap.css">
+    <script type="text/javascript" src="./website_files/sitemap.js"></script>
+    <link type="text/css" rel="Stylesheet" href="./website_files/page_notes.css">
+    <script type="text/javascript" src="./website_files/page_notes.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./website_files/feedback.css"><link rel="stylesheet" type="text/css" href="./website_files/axImgAreaSelect.css"></head>
+<body scroll="no">
+    <div id="outerContainer" style="position: relative; height: 1443px; width: 1523px;">
+
+        <div id="leftPanel" style="position: absolute; z-index: 1; left: 0px; width: 250px; height: 1443px;">
+            <div id="interfaceControlFrame" style="height: 1443px;">
+                <div id="interfaceControlFrameMinimizeContainer">
+                    <a title="Minimize" id="interfaceControlFrameMinimizeButton" onclick="collapse();">&nbsp;</a>
+                    <div id="interfaceControlFrameCloseContainer">
+                        <a title="Close" id="interfaceControlFrameCloseButton" onclick="closePlayer();">&nbsp;</a>
+                    </div>
+                </div>
+                <div id="interfaceControlFrameLogoContainer" style="display: none;">
+                    <div id="interfaceControlFrameLogoImageContainer" style="display: none;"></div>
+                    <div id="interfaceControlFrameLogoCaptionContainer" style="display: none;"></div>
+                </div>
+                <div id="interfaceControlFrameHeaderContainer">
+                    <ul id="interfaceControlFrameHeader">
+                    <li><a pluginid="sitemapHost" class="selected">Sitemap</a></li><li><a pluginid="pageNotesHost">Page Notes</a></li><li><a pluginid="feedbackContainer">Discuss</a></li></ul>
+                </div>
+                <div id="interfaceControlFrameContainer" style="height: 1401px;">
+                <div id="sitemapHost"><div id="sitemapToolbar"><div style="height:30px;"><a id="footnotesButton" title="Toggle Footnotes" class="sitemapToolbarButton sitemapToolbarButtonSelected"></a><a id="highlightInteractiveButton" title="Highlight interactive elements" class="sitemapToolbarButton"></a><a id="variablesButton" title="View Variables" class="sitemapToolbarButton"></a><a id="linksButton" title="Get Links" class="sitemapToolbarButton"></a><a id="searchButton" title="Search Pages" class="sitemapToolbarButton"></a></div><div id="searchDiv" style="width: 98%; clear: both; display: none;"><input id="searchBox" style="width: 100%;" type="text"></div><div id="sitemapLinksContainer" class="sitemapPopupContainer" style="display: none;"><span id="sitemapLinksPageName">adopt</span><div class="sitemapLinkContainer"><input id="sitemapLinkWithPlayer" type="text" class="sitemapLinkField"></div><div class="sitemapOptionContainer"><div><label><input type="radio" name="sitemapToggle" value="withoutmap">without sitemap</label></div><div><label><input type="radio" name="sitemapToggle" value="withmap">with sitemap</label><div id="sitemapOptionsDiv"><div class="sitemapUrlOption"><label><input type="checkbox" id="minimizeBox">minimize sitemap</label></div><div class="sitemapUrlOption"><label><input type="checkbox" id="footnotesBox">hide footnotes</label></div><div class="sitemapUrlOption"><label><input type="checkbox" id="highlightBox">highlight interactive elements</label></div></div></div></div></div><div id="variablesContainer" class="sitemapPopupContainer" style="display: none;"><a id="variablesClearLink">Reset Variables</a><br><br><div id="variablesDiv"></div></div></div><div id="sitemapTreeContainer"><ul class="sitemapTree" style="clear:both;"><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:15px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="home_-_not_signed_in.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Home - not signed in</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:44px"><a class="sitemapPageLink" nodeurl="create_profile.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">create profile</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:44px"><a class="sitemapPageLink" nodeurl="home_-_signed_in.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Home - signed in</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:32px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="about_us.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">about us</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="volunteer.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">volunteer</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="donate.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">donate</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="contact_-_email_us.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">contact - email us</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="contact_-_get_diections.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">contact - get diections</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div class="sitemapHighlight"><div class="sitemapPageLinkContainer" style="margin-left:32px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="adopt.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">adopt</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:49px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="view_available_animals.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">view available animals</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div class=""><div class="sitemapPageLinkContainer" style="margin-left:78px"><a class="sitemapPageLink" nodeurl="specific_animal_details.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Specific Animal Details</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:78px"><a class="sitemapPageLink" nodeurl="adoption_form_1.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">adoption form 1</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:78px"><a class="sitemapPageLink" nodeurl="adoption_form_2.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">adoption form 2</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:78px"><a class="sitemapPageLink" nodeurl="thank_you.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">thank you</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="recently_adopted.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">recently adopted</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:32px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="your_profile.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">your profile</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="pending_adoptions.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Pending Adoptions</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="meet_your_matches.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Meet Your Matches</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:61px"><a class="sitemapPageLink" nodeurl="favorites.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Favorites</span></a></div></div></li></ul></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:27px"><a class="sitemapPageLink" nodeurl="events.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">events</span></a></div></div></li></ul></div></div><div id="pageNotesHost" style="display: none;"><div id="pageNotesScrollContainer"><div id="pageNotesContainer"><div id="pageNameHeader">adopt</div><span id="pageNotesContent"></span></div></div></div><div id="feedbackContainer" style="display: none;"><div id="feedbackMinWidth"><div id="refreshFeedbackDiv"><a id="refreshFeedbackLink" href="http://4t4nli.axshare.com/#" style="display: inline;"><img src="./website_files/refresh.png" alt="Refresh" title="Refresh"></a><img id="feedbackLoadingImg" src="./website_files/fbloading.gif" alt="Refreshing..." title="Refreshing..." style="display: none;"></div><div id="feedbackPageNameHeader" title="Discuss adopt">Discuss adopt</div><div id="commenterRenameContainer">    Commenting as <a class="commenterRenameLink" href="http://4t4nli.axshare.com/"><span class="commenterName">Anonymous</span></a>    <div style="display: none;" class="commenterRename">        <form class="commenterRenameForm" style="display:inline;" action="http://4t4nli.axshare.com/">            <input type="text">            <input type="submit" value="OK">            <input class="commenterRenameCancel" type="button" value="Cancel">        </form>    </div></div><div class="commenterSetNameDialog">    <form class="commenterRenameForm" action="http://4t4nli.axshare.com/">        <center>            You are currently commenting anonymously.<br><br>            Please enter a name or click Continue as Anonymous<br><br>            <div style="width: 100%;">                <div style="height: 100%; width: 71%; float: left;">                    <input style="float: right; width: 120px; margin-top: 1px;" type="text" title="Enter Name">                </div>                <div style="height: 100%; width: 27%; float: right;">                    <input style="float: left;" type="submit" value="OK">                </div>            </div>            <br><br>            <a href="http://4t4nli.axshare.com/" class="commenterSetNameContinueAnon">Continue as Anonymous</a>        </center>    </form></div><div id="commenterSetNameDialogOverlay" class="dialogOverlay" style="background: rgba(0, 0, 0, 0.6); display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; cursor: pointer;"></div><div id="feedbackNewIssue"><div id="feedbackTag_337817805017536234220751157875084168960488075229568651981405215987" class="feedbackEntryItem">   <div class="feedbackEntryTextBoxContainer"><div class="inputHintOverlay" style="position:relative" id="wrapAddTopicjqiho"><input id="addTopicInput" type="text" title="Add Topic" class="feedbackEntryTextBox"><label for="addTopicInput" id="AddTopicjqiho" class="inputHintOverlay" style="position: absolute; z-index: 20; left: 5px; top: 4px; cursor: text;">Add Topic</label></div></div>   <div class="charsLeft"></div>   <div class="feedbackEntryItemLinks">       <img class="screenshotIssueIcon" src="./website_files/icon-camera.png" onclick="screenshotTakeMainScreenshot(this)" title="Cmd + Shift + 1">       <a class="feedbackEntryItemCancel">clear</a>       <a class="awesomeButton feedbackEntryItemSave">create</a>   </div></div></div><div id="feedbackSavedIssues" class=""></div></div></div></div>
+            </div>
+        </div><div class="vsplitbar" unselectable="on" style="z-index: 100; position: absolute; user-select: none; top: 0px; cursor: col-resize; left: 250px; height: 1443px;"><a href="javascript:void(0)" accesskey="" tabindex="0" title="vsplitbar"></a></div>
+        <div id="rightPanel" style="position: absolute; z-index: 1; left: 253px; width: 1269px; height: 1443px;">
+            <iframe id="mainFrame" name="mainFrame" width="100%" height="100%" src="./website_files/saved_resource.html" frameborder="0" style="display: block; height: 1443px;"></iframe>
+        </div>
+
+    </div>
+
+    <div id="maximizePanelContainer" style="display: none;">
+        <iframe id="expandFrame" src="./website_files/expand.html" width="100%" height="100%" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+
+
+
+</body></html>

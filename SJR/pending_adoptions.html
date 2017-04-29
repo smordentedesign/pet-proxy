@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy-SJR.css">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,400,400i,700,700i|Rancho|Sue+Ellen+Francisco" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/main-SJR.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-7">
+      <div class="home-search">
+         <input type="text" class="searchTerm" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-3">
+      <h3 class="welcome-text">Welcome, Stephanie!</h3>
+    </div>
+    <div class="col-2" style="margin-top:18px;">
+      <div class="sign-in-box-popup">
+        <a class="sign-in-button-popup" href="#signOut">Sign out</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+  <div class="col-12"  style="margin-top:30px; margin-bottom:20px;">
+      <h2 class="thin-text">S o u t h &nbsp J e r s e y &nbsp R e s c u e</h2>
+  </div>
+</div>
+
+
+  <div class="overlay" id="signOut">
+    <div class="sign-in-popup">
+      <h2>Sign Out</h2><a class="close" href="#">&times;</a>
+      <div class="row content">
+        <p>You are now signed out</p>
+          <div class="col-12">
+            <button class="sign-in-popup-btn" type="button"><a class="close-modal" href="#">Okay</a></button>
+          </div>
+      </div><!--content close-->
+    </div><!--anml popup close-->
+  </div><!--popup id 2 close-->
+
+
+
+  </div><!--header close-->
+
+
+  <div class="row"> <!--mobile nav-->
+
+    <div>
+      <div class="mobileWrap">
+      <a href="javascript:void(0);" id="toggleNav" class="toggle-btn" onclick="myFunction()">&#9776;</a>
+      <ul class="mobileNav">
+        <li style="border-bottom: 1px solid #00acd1;"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="about_us.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i> About Us</a></li>
+        <li><a href="adopt.html"><i class="fa fa-paw" aria-hidden="true"></i> Adopt</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="animals.html">view available animals</a></li>
+            <li style="background-color:#00acd1;"><a href="adopt.html">meet your match</a></li>
+            <li style="background-color:#00acd1;"><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i> Your Profile</a>
+          <ul>
+            <li style="background-color:#00acd1;"><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li style="background-color:#00acd1;"><a href="matches.html">your matches</a></li>
+            <li style="background-color:#00acd1;"><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li style="border-bottom: 1px solid #00acd1;"><a href="events.html"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+
+      </ul>
+      </div>
+    </div>
+  </div> <!--mobile nav close-->
+
+
+  <div class="row"> <!--desktop nav-->
+    <div>
+      <ul class="nav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about_us.html">about us</a>
+        </li>
+        <li><a href="adopt.html">adopt</a>
+          <ul>
+            <li><a href="animals.html">view available animals</a></li>
+            <li><a href="adopt.html">meet your match</a></li>
+            <li><a href="recently_adopted.html">recently adopted</a></li>
+          </ul>
+        </li>
+        <li><a href="profile.html">your profile</a>
+          <ul>
+            <li><a href="pending_adoptions.html">your pending adoptions</a></li>
+            <li><a href="matches.html">your matches</a></li>
+            <li><a href="favorites.html">your favorites</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">events</a></li>
+      </ul>
+
+    </div>
+
+  </div> <!--desktop nav close-->
+
+
+</div><!--container close-->
+
+
+
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-3 pending">
+    <h2>Louie</h2>
+  </div>
+
+  <div class="col-6 pending">
+    <p>90% MATCH</p>
+  </div>
+
+  <div class="col-3 pending">
+    <h2>Stephanie</h2>
+  </div>
+</div>
+
+
+
+</div> <!--container div close-->
+
+
+
+
+
+<div class="container footer">
+
+  <div class="row">
+    <div class="col-12 footer-info">
+      <h3>South Jersey Rescue</h3>
+    </div>
+    <div class="col-4 footer-info">
+      <h6>Shelter Location</h6>
+      <p>71 Willow Street<br>
+        Collingswood, NJ<br>
+        08108
+      </p>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Site Navigation</h6>
+      <div class="col-6">
+        <p>Home<br>
+          About Us<br>
+          Your Profile<br>
+          Events
+        </p>
+      </div>
+      <div class="col-6">
+        <p>Volunteer<br>
+          Donate<br>
+          Contact Us<br>
+          Directions
+        </p>
+      </div>
+    </div>
+
+    <div class="col-4 footer-info">
+      <h6>Connect With Us</h6>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

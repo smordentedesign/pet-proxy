@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://4t4nli.axshare.com/resources/expand.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+        <link type="text/css" href="./default.css" rel="Stylesheet">
+        <script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="./messagecenter.js"></script>
+        <script type="text/javascript"><!--
+            $(document).ready(function () {
+                $('#maximizePanel').click(function () {
+                    $(this).removeClass('maximizePanelOver');
+                    $axure.messageCenter.postMessage('expandFrame');
+                });
+                $('#maximizePanel').mouseenter(function () {
+                    $(this).addClass('maximizePanelOver');
+                });
+                $('#maximizePanel').mouseout(function () {
+                    $(this).removeClass('maximizePanelOver');
+                });
+            });
+        --></script>
+	</head>
+	<body style="background-color:transparent;">
+	    <div id="maximizePanel" class="maximizePanel">
+        </div>
+	
+</body></html>

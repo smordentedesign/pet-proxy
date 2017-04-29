@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
+
+<body>
+
+  <div class="row">
+    <div class="col-2">
+      <img src="images/pp_logo.png" style="width:50%; height=50%; margin-top:8px;" alt="Pet Proxy logo"/>
+    </div>
+    <div class="col-10" id="nav">
+      <div class="col-3" id="navItem1"><a href="dashboard.html">My PetProxy</a></div>
+      <div class="col-3" id="navItem2"><a href="animals.html">Our Animals</a></div>
+      <div class="col-3" id="navItem3-ON"><a href="pending_adoptions.html">Adoptions</a></div>
+      <div class="col-3" id="navItem4"><a href="website.html">Our Website</a></div>
+      </div>
+  </div>
+
+  <div class="row" id="submenu3">
+    <div class="col-6 subTxt">
+      <a class="btnSub3" href="pending_adoptions.html">pending adoptions</a>
+    </div>
+    <div class="col-6 subTxt">
+      <a class="btnSub3-ON" href="completed_adoptions.html">completed adoptions</a>
+    </div>
+  </div>
+
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 page-header">
+      <p>Completed Adoptions</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 adopt-form">
+      <form>
+      Animal Type:<br>
+        <select type="text" name="filter">
+          <option type="text" value="all types">all types</option>
+          <option type="text" value="cats">cats</option>
+          <option type="text" value="dogs">dogs</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-4 adopt-form">
+      <form>
+      Sort By:<br>
+        <select type="text" name="sort">
+          <option type="text" value="youngest">youngest to oldest</option>
+          <option type="text" value="oldest">oldest to youngest</option>
+          <option type="text" value="gender">gender</option>
+          <option type="text" value="smallest">small to large</option>
+          <option type="text" value="largest">large to small</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-4 adopt-form">
+      <form>
+        <input class="search" type="text" value="search">
+      </form>
+    </div>
+
+  </div>
+
+  <div class="row pending-adopt">
+    <div class="col-6">
+
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="col-6">
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div><!--row close div-->
+
+  <div class="row pending-adopt">
+    <div class="col-6">
+
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="col-6">
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div><!--row close div-->
+
+  <div class="row pending-adopt">
+    <div class="col-6">
+
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="col-6">
+      <div class=" adopt-box">
+        <div class="adopt-box-header">
+          <h3>Adoption Case: 4350</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+
+          <div class="col-4">
+            <p class="match-ratio-num">90%</p>
+            <p class="match-ratio">MATCH</p>
+          </div>
+
+          <div class="col-4">
+            <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="adopt-img"></a>
+          </div>
+        </div>
+
+        <div class="row adopt-box-filled">
+          <div class="col-12">
+            <p style="width:100%; font-size:16px;">This adoption is 100% complete!</p>
+              <progress max="100" value="100" class="prog">
+
+            </progress>
+
+          </div>
+
+          <div class="col-12">
+            <a href="adoption_details.html"><button type="button" class="adopt-btn" style="width:90%;">View adoption details</button></a>
+          </div>
+
+          <div class="col-12">
+            <form class="adopt-status">
+              <select type="text" name="status">
+                <option type="text" value="default">change status to...</option>
+                <option type="text" value="high">high interest</option>
+                <option type="text" value="available">still available</option>
+                <option type="text" value="low">low interest</option>
+                <option type="text" value="delete">delete this animal's profile</option>
+              </select>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div><!--row close div-->
+
+
+</div> <!--container div end-->
+
+
+
+
+
+
+
+
+<div class="row" id="footer_adoptions">
+  <div class="col-4" style="margin-top:60px;">
+    <a class="footer-text" href="#">About</a>
+    <a class="footer-text" href="#">Contact</a>
+    <a class="footer-text" href="#">Privacy</a>
+    <a class="footer-text" href="#">Support</a>
+  </div>
+  <div class="col-4" style="margin-top:20px;">
+    <img src="images/pp_logo_white.png" style="width:40%; height=40%;" alt="Pet Proxy logo"/>
+  </div>
+  <div class="col-4" style="margin-top:50px;">
+    <svg class="social-media-adopt" height="40" width="40">
+    </svg>
+    <svg class="social-media-adopt" height="40" width="40">
+    </svg>
+    <svg class="social-media-adopt" height="40" width="40">
+    </svg>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
+
+<body>
+
+
+
+  <div class="row">
+    <div class="col-2">
+      <img src="images/pp_logo.png" style="width:50%; height=50%; margin-top:8px;" alt="Pet Proxy logo"/>
+    </div>
+    <div class="col-10" id="nav">
+      <div class="col-3" id="navItem1-ON"><a href="dashboard.html">My PetProxy</a></div>
+      <div class="col-3" id="navItem2"><a href="animals.html">Our Animals</a></div>
+      <div class="col-3" id="navItem3"><a href="pending_adoptions.html">Adoptions</a></div>
+      <div class="col-3" id="navItem4"><a href="website.html">Our Website</a></div>
+    </div>
+  </div>
+
+  <div class="row sub-menu" id="submenu1">
+    <div class="col-4 subTxt">
+      <a class="btnSub1" href="dashboard.html">Home</a>
+    </div>
+    <div class="col-4 subTxt">
+      <a class="btnSub1" href="calendar.html">Calendar</a>
+    </div>
+    <div class="col-4 subTxt">
+      <a class="btnSub1-ON" href="settings.html">Settings</a>
+    </div>
+  </div>
+
+
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-12 page-header">
+  <p>Manage your settings.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 pp-box-header">
+    <h3>System Log in Information</h3>
+
+    <div class="col-6 pp-box-content">
+      <h5>Administrator Access</h5>
+      <p>Administrators will have the ability to:</p>
+        <ul class="pp-list left">
+          <li>approve/deny adoptions</li>
+          <li>change an animal's status</li>
+          <li>change the appearance of the organization's website</li>
+          <li>edit the content of the organization's website</li>
+        </ul>
+
+        <div class="pp-box-popup">
+          <a class="pp-button-popup" href="#popup1" style="width:40%; margin-bottom:40px;">change password</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+          <div class="pp-popup">
+            <h2>Change Admin Password</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              pswd fields.
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="col-6 pp-box-content">
+      <h5>Basic Employee Access</h5>
+      <p>Basic employees will have the ability to:</p>
+        <ul class="pp-list left">
+          <li>add a new animal profile</li>
+          <li>edit existing animal profiles</li>
+          <li>view pending adoption statuses (read only)</li>
+          <li>view completed adoption statuses (read only)</li>
+        </ul>
+
+        <div class="pp-box-popup">
+          <a class="pp-button-popup" href="#popup1" style="width:40%; margin-bottom:40px;">change password</a>
+        </div>
+
+        <div id="popup1" class="overlay">
+          <div class="pp-popup">
+            <h2>Change Admin Password</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              pswd fields.
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 pp-box-header">
+    <h3>Your Organization's Website Information</h3>
+    <form class="pp-form">
+    Your Organization's Name:<br>
+    <input type="text" name="firstname">
+    <br>
+    Your Organization's Tagline:<br>
+    <input type="text" name="lastname">
+    <br>
+    URL:<br>
+    <input type="text" name="lastname">
+    <br>
+    Language:<br>
+    <select type="text" name="Language" style="margin-bottom:40px;">
+      <option type="text" value="volvo">English</option>
+      <option type="text" value="saab">Spanish</option>
+      <option type="text" value="fiat">French</option>
+      <option type="text" value="audi">German</option>
+    </select>
+  </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 pp-box-header">
+
+    <h3>Payment Information</h3>
+
+    <div class="col-12">
+      <form class="pp-form">
+      Your Organization:<br>
+      <input type="text" name="firstname">
+    </form>
+    </div>
+
+    <div class="row">
+      <div class="col-10">
+        <form class="pp-form">
+        Payment Type:
+          <select type="text" name="Language">
+            <option type="text" value="visa">Visa</option>
+            <option type="text" value="mc">Mastercard</option>
+            <option type="text" value="ae">American Express</option>
+            <option type="text" value="discover">Discover</option>
+          </select>
+        </form>
+      </div>
+      <div class="col-2">
+        <p>cc images</p>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-5">
+        <form class="pp-form">
+        Expiration date:
+          <select type="text" name="Month">
+            <option type="text" value="January">January</option>
+            <option type="text" value="February">February</option>
+            <option type="text" value="March">March</option>
+            <option type="text" value="April">April</option>
+          </select>
+        </form>
+      </div>
+      <div class="col-4">
+        <form class="pp-form">
+        Expriation year:
+          <select type="text" name="Year">
+            <option type="text" value="2017">2017</option>
+            <option type="text" value="2018">2018</option>
+            <option type="text" value="2019">2019</option>
+            <option type="text" value="2020">2020</option>
+          </select>
+        </form>
+      </div>
+      <div class="col-2">
+        <form class="pp-form">
+        CVV:<br>
+        <input type="text" name="cvv" style="width:120%;">
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12 pp-box-header">
+    <h3>Adoption Specifics and Fees</h3>
+
+    <div class="col-6">
+      <form class="pp-form">
+      Annual Animal Intake:
+        <select type="text" name="Year">
+          <option type="text" value="2017">2017</option>
+          <option type="text" value="2018">2018</option>
+          <option type="text" value="2019">2019</option>
+          <option type="text" value="2020">2020</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-6">
+      <form class="pp-form">
+      Annual Animal Intake:
+        <select type="text" name="Year">
+          <option type="text" value="2017">2017</option>
+          <option type="text" value="2018">2018</option>
+          <option type="text" value="2019">2019</option>
+          <option type="text" value="2020">2020</option>
+        </select>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="pp-box-popup">
+      <a class="pp-button-popup" href="#saveChanges" style="width:40%;">Save Changes</a>
+    </div>
+
+    <div id="saveChanges" class="overlay">
+      <div class="pp-popup">
+        <h2>Saved</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Your changes have been saved.
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="pp-popup-content-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
+          </div>
+          <div class="col-6">
+            <button class="pp-popup-content-btn" type="button"><a class="close-modal" href="#">No</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</div> <!--container div end-->
+
+
+
+
+
+
+
+
+<div class="row" id="footer_dashboard">
+  <div class="col-4" style="margin-top:60px;">
+    <a class="footer-text" href="#">About</a>
+    <a class="footer-text" href="#">Contact</a>
+    <a class="footer-text" href="#">Privacy</a>
+    <a class="footer-text" href="#">Support</a>
+  </div>
+  <div class="col-4" style="margin-top:20px;">
+    <img src="images/pp_logo_white.png" style="width:40%; height=40%;" alt="Pet Proxy logo"/>
+  </div>
+  <div class="col-4" style="margin-top:50px;">
+    <svg class="social-media-pp" height="40" width="40">
+    </svg>
+    <svg class="social-media-pp" height="40" width="40">
+    </svg>
+    <svg class="social-media-pp" height="40" width="40">
+    </svg>
+  </div>
+</div>
+
+</body>
+</html>

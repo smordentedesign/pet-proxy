@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PetProxy</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="js/petproxy.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<body>
+
+  <div class="row">
+    <div class="col-2">
+      <img src="images/pp_logo.png" style="width:50%; height=50%; margin-top:8px;" alt="Pet Proxy logo"/>
+    </div>
+    <div class="col-10" id="nav">
+      <div class="col-3" id="navItem1"><a href="dashboard.html">My PetProxy</a></div>
+      <div class="col-3" id="navItem2-ON"><a href="animals.html">Our Animals</a></div>
+      <div class="col-3" id="navItem3"><a href="pending_adoptions.html">Adoptions</a></div>
+      <div class="col-3" id="navItem4"><a href="website.html">Our Website</a></div>
+      </div>
+  </div>
+
+  <div class="row" id="submenu2">
+    <div class="col-4-sm subTxt">
+      <a class="btnSub2" href="add_animal.html">Add an animal</a>
+    </div>
+    <div class="col-4-sm subTxt">
+      <a class="btnSub2-ON" href="animals.html">Available animals</a>
+    </div>
+    <div class="col-4-sm subTxt">
+      <a class="btnSub2" href="archived_profiles.html">Archived profiles</a>
+    </div>
+  </div>
+
+
+
+
+<div class="container">
+
+
+  <select id="selectBox">
+    <option value="0">- Select -</option>
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+</select>
+<div id="dialog-modal">test</div>
+
+
+<div class="row">
+  <div class="col-12 page-header">
+    <p>South Jersey Rescue's Available Animals</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4 anml-form">
+    <form>
+    Animal Type:<br>
+      <select type="text" name="filter">
+        <option type="text" value="all types">all types</option>
+        <option type="text" value="cats">cats</option>
+        <option type="text" value="dogs">dogs</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="col-4 anml-form">
+    <form>
+    Sort By:<br>
+      <select type="text" name="sort">
+        <option type="text" value="youngest">youngest to oldest</option>
+        <option type="text" value="oldest">oldest to youngest</option>
+        <option type="text" value="gender">gender</option>
+        <option type="text" value="smallest">small to large</option>
+        <option type="text" value="largest">large to small</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="col-4 anml-form">
+    <form>
+      <input class="search" type="text" value="search">
+    </form>
+  </div>
+
+</div>
+
+
+<div class="row anml-box">
+  <div class="col-12 anml-box-header">
+    <h3>Pending Adoption</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending1.jpg" class="anml-img"></a>
+      <button type="button" class="anml-btn">View Adoption Details</button>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending2.jpg" class="anml-img"></a>
+      <button type="button" class="anml-btn">View Adoption Details</button>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="anml-img"></a>
+      <button type="button" class="anml-btn">View Adoption Details</button>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending4.jpg" class="anml-img"></a>
+      <button type="button" class="anml-btn">View Adoption Details</button>
+    </div>
+  </div>
+</div>
+
+<div class="row anml-box">
+  <div class="col-12 anml-box-header">
+    <h3>High Interest</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending1.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending2.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending4.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<div class="row anml-box">
+  <div class="col-12 anml-box-header">
+    <h3>Still Available</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending1.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending2.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending4.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<div class="row anml-box">
+  <div class="col-12 anml-box-header">
+    <h3>Low Interest</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending1.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending2.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending3.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="col-3">
+      <h3 class="anml-name">Ginger</h3>
+      <a href="animal_profile.html"><img src="images/pet_photos/pending4.jpg" class="anml-img"></a>
+      <a href="animal_profile.html"><button type="button" class="anml-btn">View Profile</button></a>
+      <a href="edit_profile.html"><button type="button" class="anml-btn-edit">Edit Profile</button></a>
+      <form class="anml-status">
+        <select type="text" name="status">
+          <option type="text" value="default">change status...</option>
+          <option type="text" value="archive">archive profile</option>
+          <option type="text" value="high">high interest</option>
+          <option type="text" value="available">still available</option>
+          <option type="text" value="low">low interest</option>
+          <option type="text" value="delete">delete profile</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+</div> <!--container div end-->
+
+
+
+
+
+
+
+
+<div class="row" id="footer_animals">
+  <div class="col-4" style="margin-top:60px;">
+    <a class="footer-text" href="#">About</a>
+    <a class="footer-text" href="#">Contact</a>
+    <a class="footer-text" href="#">Privacy</a>
+    <a class="footer-text" href="#">Support</a>
+  </div>
+  <div class="col-4" style="margin-top:20px;">
+    <img src="images/pp_logo_white.png" style="width:40%; height=40%;" alt="Pet Proxy logo"/>
+  </div>
+  <div class="col-4" style="margin-top:50px;">
+    <svg class="social-media-anml" height="40" width="40">
+    </svg>
+    <svg class="social-media-anml" height="40" width="40">
+    </svg>
+    <svg class="social-media-anml" height="40" width="40">
+    </svg>
+  </div>
+
+</body>
+</html>
