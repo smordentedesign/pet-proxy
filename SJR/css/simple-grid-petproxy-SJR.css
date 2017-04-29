@@ -108,11 +108,11 @@ img{
 }
 
 .sign-in-popup {
-  margin: 200px auto;
+  margin: 80px auto;
   padding: 20px;
   background: #00ACD1;
   border-radius: 5px;
-  width: 40%;
+  width: 80%;
   position: relative;
 }
 
