@@ -4,7 +4,7 @@
 <title>PetProxy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy-SJR.css">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,300,300i,400,400i,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,200i,400,400i,700,700i|Rancho|Sue+Ellen+Francisco" rel="stylesheet">
 <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
@@ -19,81 +19,49 @@
 
 
 
-  <div class="row" style="margin-top:20px;">
-    <div class="col-6" style="margin-top:20px; margin-bottom:20px;">
-      <form style="margin:0 auto;  text-align:center;">
-        <input class="main-search" type="text" value="search" style="border:1px solid #00ACD1; color:#D3D3D3; text-align:center;">
-      </form>
-    </div>
-
-    <div class="col-6" style="margin-top:20px;">
-      <div class="col-6-sm">
-        <div class="sign-in-box-popup">
-          <a class="sign-in-button-popup" href="#signIn">Sign In</a>
-        </div>
-      </div>
-      <div class="col-6-sm">
-        <div class="sign-in-box-popup">
-          <a class="sign-in-button-popup" href="#signUp">Sign Up</a>
-        </div>
+  <div class="row">
+    <div class="col-7">
+      <div class="home-search">
+         <input type="text" class="searchTerm" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
       </div>
     </div>
-
-
-    <div class="overlay" id="signIn">
-      <div class="sign-in-popup">
-        <h2>Sign In</h2><a class="close" href="#">&times;</a>
-        <div class="row content">
-            <div class="col-12">
-              <input type="text" value="username">
-              <input type="text" value="password">
-            </div>
-            <div class="col-12">
-              <a class="close-modal" href="index_signed_in.html"><button class="sign-in-popup-btn" type="button">Sign In</button></a>
-            </div>
-            <div class="col-6">
-              <p>Forgot Username?</p>
-            </div>
-            <div class="col-6">
-              <p href="#">Forgot Username?</p>
-            </div>
-        </div><!--content close-->
-      </div><!--anml popup close-->
-    </div><!--popup id 2 close-->
-
-    <div class="overlay" id="signUp">
-      <div class="sign-in-popup">
-        <h2>Create an account</h2><a class="close" href="#">&times;</a>
-        <div class="row content">
-            <div class="col-12">
-              <input type="text" value="username">
-              <input type="text" value="password">
-              <input type="text" value="confirm password">
-              <form class="sign-up-checkbox">
-              <input type="checkbox" id="dogs" name="dogs" value="dogs">
-              <label for="dogs">I accept SJR's Terms and Conditions</label>
-              </form>
-            </div>
-            <div class="col-12">
-              <button class="sign-in-popup-btn" type="button"><a href="create_profile.html">Create Account!</a></button>
-            </div>
-            <div class="col-6">
-              <p>Forgot Username?</p>
-            </div>
-            <div class="col-6">
-              <p>Forgot Username?</p>
-            </div>
-        </div><!--content close-->
-      </div><!--anml popup close-->
-    </div><!--popup id 2 close-->
+    <div class="col-3">
+      <h3 class="welcome-text">Welcome, Stephanie!</h3>
+    </div>
+    <div class="col-2" style="margin-top:18px;">
+      <div class="sign-in-box-popup">
+        <a class="sign-in-button-popup" href="#signOut">Sign out</a>
+      </div>
+    </div>
 
   </div>
+
 
   <div class="row">
-    <div class="col-12"  style="margin-top:30px; margin-bottom:20px;">
-      <h2 class="thin-text">South Jersey Rescue</h2>
-    </div>
+  <div class="col-12"  style="margin-top:30px; margin-bottom:20px;">
+    <h2 class="thin-text">South Jersey Rescue</h2>
   </div>
+</div>
+
+
+  <div class="overlay" id="signOut">
+    <div class="sign-in-popup">
+      <h2>Sign Out</h2><a class="close" href="#">&times;</a>
+      <div class="row content">
+        <p>You are now signed out</p>
+          <div class="col-12">
+            <button class="sign-in-popup-btn" type="button"><a class="close-modal" href="#">Okay</a></button>
+          </div>
+      </div><!--content close-->
+    </div><!--anml popup close-->
+  </div><!--popup id 2 close-->
+
+
+
+  </div><!--header close-->
 
 
 
