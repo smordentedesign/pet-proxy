@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="css/simple-grid-petproxy.css">
-
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
 
 <body>
@@ -53,7 +54,7 @@
       <div class="calendar">
         <h1>May 2017</h1>
         <table>
-          <tr>
+          <tr class="weekdays">
             <td style="color:#fff; border:0px; background-color:#43b4c1;">Sunday</td>
             <td style="color:#fff; border:0px; background-color:#43b4c1;">Monday</td>
             <td style="color:#fff; border:0px; background-color:#43b4c1;">Tuesday</td>
@@ -75,12 +76,12 @@
           </tr>
           <tr>
             <td>7</td>
-            <td class="current">8</td>
+            <td>8</td>
             <td class="hastask">9</td>
             <td>10</td>
             <td>11</td>
             <td class="hastask">12</td>
-            <td>13</td>
+            <td class="current">13</td>
           </tr>
           <tr>
             <td>14</td>
@@ -113,8 +114,11 @@
       </div>
 
       <div class="event-details">
-        <h3>Event Details for: Saturday, May 6, 2017</h3>
-        <p>All about this event!</p>
+        <h3>Saturday, May 13, 2017</h3>
+        <p><strong>Event Name:</strong> &nbsp Pet Store adoption event!</p>
+        <p><strong>Starts:</strong> &nbsp 1:00 PM</p>
+        <p><strong>Ends:</strong> &nbsp 5:00 PM</p>
+        <p><strong>Details:</strong> &nbsp This will be an awesome adoption event!</p>
       </div>
     </div>
 
@@ -134,8 +138,23 @@
           <h2>Add an Event</h2>
           <a class="close" href="#">&times;</a>
           <div class="content">
-            event info fields.
+            <form class="pp-form">
+            Event Name:
+            <input type="text" name="firstname" style="display:inline-block; width:39%;">
+            Date:
+            <input type="text" name="firstname" style="display:inline-block; width:29%;"><i class="fa fa-calendar fa-2x" aria-hidden="true" style="padding-left:10px;"></i>
+            </form>
+            <form class="pp-form">
+            Starts:
+            <input type="text" name="firstname" style="display:inline-block; width:39%;">
+            Ends:
+            <input type="text" name="firstname" style="display:inline-block; width:39%;">
+            </form>
+            <div class="col-12 pp-textbox">
+              <textarea cols="2" rows="5">All about this event...</textarea>
+            </div>
           </div>
+          <button class="pp-popup-btn" type="button"><a class="close-modal" href="#">Add this event!</a></button>
         </div>
       </div>
 
@@ -145,12 +164,6 @@
           <p>upcoming events</p>
         </div>
           <div class="event-list">
-            <div class="event">
-              <div class="event-container">
-                <h4>Saturday May 6, 2017</h4>
-                <p>Adoption Event!</p>
-              </div>
-            </div>
             <div class="event">
               <div class="event-container">
                 <h4>Saturday May 13, 2017</h4>
@@ -166,6 +179,12 @@
             <div class="event">
               <div class="event-container">
                 <h4>Saturday May 27, 2017</h4>
+                <p>Adoption Event!</p>
+              </div>
+            </div>
+            <div class="event">
+              <div class="event-container">
+                <h4>Saturday June 3, 2017</h4>
                 <p>Adoption Event!</p>
               </div>
             </div>
