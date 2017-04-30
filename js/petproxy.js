@@ -1,18 +1,68 @@
 $(document).ready(function () {
 
-    $('#dialog-modal').dialog({
+    $('#dialog-modal-archive1').dialog({
         modal: true,
         autoOpen: false
     });
 
     $('select').change(function () {
-        if ($(this).val() == "1") {
-            $('#dialog-modal').dialog('open');
+        if ($(this).val() == "archive") {
+            $('#dialog-modal-archive').dialog('open');
         }
     });
+
+    $('#dialog-modal-high').dialog({
+        modal: true,
+        autoOpen: false
+    });
+
     $('select').change(function () {
-        if ($(this).val() == "2") {
-            $('#dialog-modal').dialog('open');
+        if ($(this).val() == "high") {
+            $('#dialog-modal-high').dialog('open');
+        }
+    });
+
+    $('#dialog-modal-available').dialog({
+        modal: true,
+        autoOpen: false
+    });
+
+    $('select').change(function () {
+        if ($(this).val() == "available") {
+            $('#dialog-modal-available').dialog('open');
+        }
+    });
+
+    $('#dialog-modal-low').dialog({
+        modal: true,
+        autoOpen: false
+    });
+
+    $('select').change(function () {
+        if ($(this).val() == "low") {
+            $('#dialog-modal-low').dialog('open');
+        }
+    });
+
+    $('#dialog-modal-hide').dialog({
+        modal: true,
+        autoOpen: false
+    });
+
+    $('select').change(function () {
+        if ($(this).val() == "hide") {
+            $('#dialog-modal-hide').dialog('open');
+        }
+    });
+
+    $('#dialog-modal-delete').dialog({
+        modal: true,
+        autoOpen: false
+    });
+
+    $('select').change(function () {
+        if ($(this).val() == "delete") {
+            $('#dialog-modal-delete').dialog('open');
         }
     });
 
