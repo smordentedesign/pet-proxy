@@ -51,8 +51,7 @@
 <div class="row">
   <div class="col-12 pp-box-header">
     <h3>System Log in Information</h3>
-
-    <div class="col-6 pp-box-content">
+    <div class="col-6-sm pp-box-content">
       <h5>Administrator Access</h5>
       <p>Administrators will have the ability to:</p>
         <ul class="pp-list left">
@@ -61,23 +60,9 @@
           <li>change the appearance of the organization's website</li>
           <li>edit the content of the organization's website</li>
         </ul>
-
-        <div class="pp-box-popup">
-          <a class="pp-button-popup" href="#popup1" style="width:40%; margin-bottom:40px;">change password</a>
-        </div>
-
-        <div id="popup1" class="overlay">
-          <div class="pp-popup">
-            <h2>Change Admin Password</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-              pswd fields.
-            </div>
-          </div>
-        </div>
-
     </div>
-    <div class="col-6 pp-box-content">
+
+    <div class="col-6-sm pp-box-content">
       <h5>Basic Employee Access</h5>
       <p>Basic employees will have the ability to:</p>
         <ul class="pp-list left">
@@ -86,22 +71,90 @@
           <li>view pending adoption statuses (read only)</li>
           <li>view completed adoption statuses (read only)</li>
         </ul>
+    </div>
 
-        <div class="pp-box-popup">
-          <a class="pp-button-popup" href="#popup1" style="width:40%; margin-bottom:40px;">change password</a>
-        </div>
-
-        <div id="popup1" class="overlay">
-          <div class="pp-popup">
-            <h2>Change Admin Password</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-              pswd fields.
+    <div class="col-6-sm">
+      <div class="pp-box-popup">
+              <a class="pp-button-popup" href="#popup1">change password</a>
             </div>
-          </div>
-        </div>
+
+            <div id="popup1" class="overlay">
+              <div class="pp-popup">
+                <h2>Change Admin Password</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                  <form class="pp-form">
+                  Username:
+                  <input type="text" name="firstname">
+                  </form>
+                  <div class="col-6">
+                    <form class="pp-form">
+                    New Password:
+                    <input type="text" name="firstname">
+                    </form>
+                  </div>
+                  <div class="col-6">
+                    <form class="pp-form">
+                    Confirm New Password:
+                    <input type="text" name="firstname">
+                    </form>
+                  </div>
+
+                  <div class="col-6">
+                    <button class="pp-popup-btn" type="button"><a class="close-modal" href="#">Cancel</a></button>
+                  </div>
+                  <div class="col-6">
+                  <button class="pp-popup-btn" type="button"><a class="close-modal" href="#">update password</a></button>
+                </div>
+
+                </div>
+
+              </div>
+            </div>
 
     </div>
+
+    <div class="col-6-sm">
+      <div class="pp-box-popup">
+                <a class="pp-button-popup" href="#popup2">change password</a>
+              </div>
+
+              <div id="popup2" class="overlay">
+                <div class="pp-popup">
+                  <h2>Change Employee Password</h2>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    <form class="pp-form">
+                    Username:
+                    <input type="text" name="firstname">
+                    </form>
+                    <div class="col-6">
+                      <form class="pp-form">
+                      New Password:
+                      <input type="text" name="firstname">
+                      </form>
+                    </div>
+                    <div class="col-6">
+                      <form class="pp-form">
+                      Confirm New Password:
+                      <input type="text" name="firstname">
+                      </form>
+                    </div>
+
+                    <div class="col-6">
+                      <button class="pp-popup-btn" type="button"><a class="close-modal" href="#">Cancel</a></button>
+                    </div>
+                    <div class="col-6">
+                    <button class="pp-popup-btn" type="button"><a class="close-modal" href="#">update password</a></button>
+                  </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+    </div>
+
   </div>
 </div>
 
@@ -269,7 +322,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <button class="pp-popup-content-btn" type="button" style="width:50%;"><a class="close-modal" href="#">Okay</a></button>
+            <button class="pp-popup-btn" type="button" style="width:50%;"><a class="close-modal" href="#">Okay</a></button>
           </div>
         </div>
       </div>
