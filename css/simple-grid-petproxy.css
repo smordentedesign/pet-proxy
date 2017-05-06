@@ -731,7 +731,7 @@ border-color: #01a2b2;
   font-size: 60px;
   text-transform: uppercase;
   color:#fff;
-  margin-top:20px;
+  margin-top:2p0px;
   margin-bottom: 0px;
 }
 
@@ -1242,6 +1242,12 @@ border-color: #01a2b2;
   font-size:30px;
   margin-bottom:2px;
 }
+
+.personality-amount{
+  width:90%;
+}
+
+
 
 
 /*personality slider*/
