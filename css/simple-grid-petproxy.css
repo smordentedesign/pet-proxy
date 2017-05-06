@@ -435,6 +435,11 @@ textarea {
   padding-bottom: 15px;
 }
 
+.header-logo{
+  width:5%;
+  margin-top:10px;
+}
+
 /*MY PETPROXY SECTION*/
 #navItem1{
   text-align: center;
