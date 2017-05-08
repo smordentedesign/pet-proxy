@@ -2262,6 +2262,23 @@ progress[value]::-webkit-progress-value {
   margin-top:15px;
 }
 
+.website-btn-edit{
+  color:#5e0f44;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #480f39;;
+  display:inline-block;
+  text-align:center;
+  text-decoration: none;
+  text-transform:uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  width:70%;
+  height: 45px;
+  font-size:13px;
+  margin-bottom: 15px;
+}
+
 .password-resend p{
   text-decoration: underline;
   padding-bottom:20px;
@@ -2343,6 +2360,11 @@ progress[value]::-webkit-progress-value {
   margin-top:0px;
 }
 
+.edit-bar p{
+  color:#fff;
+  font-size: 12px;
+}
+
 
 .edit-img{
   width:40%;
@@ -2379,9 +2401,9 @@ progress[value]::-webkit-progress-value {
 }
 
 .website-template{
-  width:80%;
+  width:28%;
   margin-top: 60px;
-
+  display: inline-block;
 }
 
 
@@ -2988,7 +3010,10 @@ font-size:16px;
 
 /*WEBSITE*/
 
-
+.website-show-hide{
+  display: inline-block;
+  width:30%;
+}
 
 
 /* -----BUTTONS----- */
