@@ -1757,6 +1757,15 @@ border-color: #01a2b2;
   width:80%;
 }
 
+.adopt-img-pending{
+  display: block;
+  margin:0 auto;
+  padding-top:10px;
+  padding-bottom: 20px;
+  width:80%;
+}
+
+
 progress[value] {
 	appearance: none;
 	border: none;
@@ -2106,7 +2115,9 @@ progress[value]::-webkit-progress-value {
   padding-right:20px;
 }
 
-
+.pending-anml-name{
+  margin-bottom: 0px;
+}
 
 
 
