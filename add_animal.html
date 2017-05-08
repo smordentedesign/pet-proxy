@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Condensed:300,400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+
 </head>
 
 <body>
@@ -190,50 +191,7 @@
 				<div class="row">
 					<div class="col-12"><img class="img-placeholder" src="images/pet_image_placeholder.jpg"></div>
 				</div>
-				<div class="row"><!--Image Uploader Start-->
-					<div class="col-6">
-						<div class="anml-box-popup">
-							<a class="anml-button-popup" href="#popup2">Make main image</a>
-						</div>
-						<div class="overlay" id="popup2">
-							<div class="anml-popup">
-								<h2>Main Image</h2><a class="close" href="#">&times;</a>
-								<div class="content">
-									Are you sure you want to make this the main image?
-									<div class="row">
-										<div class="col-6">
-											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
-										</div>
-										<div class="col-6">
-											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
-										</div>
-									</div>
-								</div><!--content close-->
-							</div><!--anml popup close-->
-						</div><!--popup id 2 close-->
-					</div>
-					<div class="col-6">
-						<div class="anml-box-popup">
-							<a class="anml-button-popup" href="#popup3">delete this image</a>
-						</div>
-						<div class="overlay" id="popup3">
-							<div class="anml-popup">
-								<h2>Delete</h2><a class="close" href="#">&times;</a>
-								<div class="content">
-									Are you sure you want to delete this image?
-									<div class="row">
-										<div class="col-6">
-											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
-										</div>
-										<div class="col-6">
-											<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
-										</div>
-									</div>
-								</div><!--content close-->
-							</div><!--anml popup close-->
-						</div><!--popup id 3 close-->
-					</div>
-				</div><!--Image Uploader close-->
+
 
 				<div class="row">
 					<div class="col-12" style="margin-top:15px;">
@@ -307,6 +265,9 @@
 									<div>
 											<input type='file'/>
 									</div>
+								</div>
+								<div class="col-12">
+									<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Add Image</a></button>
 								</div>
 							</div>
 						</div>
@@ -565,12 +526,12 @@
 				<h3>Site Visibility</h3>
 				<p class="row anml-instr">This option allows you to choose whether or not to show this animal's profile on your site once it has been added. This is a great options for animals that are on a medical hold or still under behavorial observation.</p>
 			</div>
-			<div class="col-6">
-				<button class="anml-btn-short" type="button">Show profile on site</button>
+
+			<div id="selectable">
+				<img src="images/show.png" class="ui-widget-content show-hide" />
+				<img src="images/hide.png" class="ui-widget-content show-hide" />
 			</div>
-			<div class="col-6">
-				<button class="anml-btn-short" type="button">Hide profile on site</button>
-			</div>
+
 		</div><!--site visibility end-->
 
 		<div class="row"><!--add animal/cancel page begin-->
@@ -587,7 +548,7 @@
 								Are you sure you want to add this animal profile?
 								<div class="row">
 									<div class="col-6">
-										<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">Yes</a></button>
+										<button class="anml-popup-btn" type="button"><a class="close-modal" href="animals.html">Yes</a></button>
 									</div>
 									<div class="col-6">
 										<button class="anml-popup-btn" type="button"><a class="close-modal" href="#">No</a></button>
@@ -652,7 +613,8 @@
 </body>
 
 
-<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-<script src="js/petproxy.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="js/petproxy2.js"></script>
 
 </html>

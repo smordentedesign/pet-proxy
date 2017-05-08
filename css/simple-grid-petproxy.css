@@ -186,24 +186,81 @@ body {
   width:100%;
 }
 
-.main1{
+.index-bottom-imgs{
+  margin-top: 4px;
+}
+
+.image-hover-text-container
+{
+  position: relative;
+  width: auto;
+  height: auto;
+  transition: all 0.2s linear;
   width:100%;
-  border-top:8px solid #fff;
-  border-bottom:8px solid #fff;
+}
+
+.image-hover-image
+{
+ display: block;
+}
+
+.image-hover-image img
+{
+  border-radius: 0%;
+  width: 100%;
+}
+
+.image-hover-text
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0.2s linear;
+}
+
+.image-hover-text:hover
+{
+  opacity: 1;
+}
+
+.image-hover-text-bubble
+{
+  position: relative;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(16, 117, 169, 0.9);
+  border-radius: 0%;
+  margin: 0 auto;
+  padding: 30% 0px;
+  overflow: hidden;
+  font-size: 17px;
+  text-align: center;
+  word-wrap: break-word;
+  color:#fff;
+}
+
+.image-hover-text .image-hover-text-title
+{
+  font-size: 25px;
+  font-family: 'roboto condensed';
+  font-weight: 200;
+  display: block;
 }
 
 
-.main2{
-  width:100%;
-  border-top:8px solid #fff;
-  border-bottom:8px solid #fff;
-}
 
-.main3{
-  width:100%;
-  border-top: 8px solid #fff;
-  border-bottom:8px solid #fff;
-}
+
+
+
+
 
 
 
@@ -226,6 +283,11 @@ body {
 .basic{
   width:30%;
   display: inline-block;
+}
+
+.show-hide{
+  display: inline-block;
+  width:30%;
 }
 
 .advanced{
@@ -306,7 +368,7 @@ body {
 
 
 .index-text{
-  padding-top:17%;
+  padding-top:10%;
 }
 
 .index-text h1{
@@ -1118,6 +1180,12 @@ border-color: #01a2b2;
   margin-top: 30px;
   border: 4px dashed #00586b;
   width:70%;
+}
+
+.img-placeholder-big{
+  margin-top: 30px;
+  border: 4px dashed #00586b;
+  width:40%;
 }
 
 .additional-images{
@@ -2469,13 +2537,25 @@ p {
   outline: none;
 }
 
-.ui-dialog{
-  height:400px;
+.ui-corner-all{
+  width:90%;
+  margin-left: 10%;
+  margin-top: 50px;
+  z-index: 100;
 }
+
+/*this is the text*/
+.ui-front{
+  color:#fff;
+}
+
+
 .ui-dialog-content{
 background: #00586b;
 border-radius: 5px;
 width: 80%;
+margin-top:0px;
+height:100px;
 }
 
 .ui-button{
@@ -2492,7 +2572,6 @@ font-weight: 700;
 width:70%;
 height: 40px;
 font-size:16px;
-
 }
 
 

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('#dialog-modal-archive1').dialog({
+    $('#dialog-modal-archive').dialog({
         modal: true,
         autoOpen: false
     });
