@@ -249,10 +249,11 @@ body {
 
 .image-hover-text .image-hover-text-title
 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'roboto condensed';
   font-weight: 200;
   display: block;
+  padding:10px;
 }
 
 
@@ -1458,6 +1459,16 @@ border-color: #01a2b2;
   color:red;
 }
 
+.slider input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none !important;
+  width: 20px;
+  height: 35px;
+  background-color: #90C649;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+
 #rangevalue{
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
@@ -2277,6 +2288,7 @@ progress[value]::-webkit-progress-value {
   height: 45px;
   font-size:13px;
   margin-bottom: 15px;
+  margin-top:20px;
 }
 
 .password-resend p{
@@ -2368,6 +2380,14 @@ progress[value]::-webkit-progress-value {
 
 .edit-img{
   width:40%;
+}
+
+.edit-icon{
+  width:30%;
+}
+
+.edit-icon-fix{
+  width:60%;
 }
 
 .website-box{
