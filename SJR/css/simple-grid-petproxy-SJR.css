@@ -672,8 +672,16 @@ p {
 }
 
 .recent-info h3{
-  margin-top: 20px;
+  padding-top: 10%;
   color:#fff;
+}
+
+.recent-info p{
+  padding-top: 5%;
+  color:#fff;
+  font-size: 15px;
+  width:90%;
+  margin: 0 auto;
 }
 
 .details h3{
@@ -1012,6 +1020,12 @@ p {
   width:90%;
 }
 
+
+.credit-cards{
+  width:60%;
+  padding-top: 37px;
+  margin: 0 auto;
+}
 
 
 /* -----BUTTONS----- */
@@ -1419,14 +1433,25 @@ p {
 
 .slider input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance: none !important;
-  width: 30px;
-  height: 30px;
-  background-color: green;
+  width: 20px;
+  height: 35px;
+  background-color: #00ACD1;
   border-radius: 30px;
   transition: all 0.5s ease;
 }
 
 #rangevalue{
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+  display: block;
+  margin: auto;
+  padding: 10px 0px;
+  width: 100%;
+  color: #134b5a;
+}
+
+#rangevalue1{
   text-align: center;
   font-weight: 700;
   font-size: 25px;
@@ -1808,6 +1833,46 @@ textarea {
 }
 
 
+.main-checkbox-white{
+  text-align: left;
+  margin-left:28%;
+  margin-top:10px;
+}
+
+.main-checkbox-white input[type=checkbox] {
+  display: none;
+}
+
+.main-checkbox-white input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 1px solid #fff;
+  border-radius: 4px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding-left: 4px;
+  padding-bottom: 4px;
+  margin-right: 4px;
+  vertical-align: center;
+  color: transparent;
+  transition: .2s;
+}
+
+.main-checkbox-white input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.main-checkbox-white input[type=checkbox]:checked + label:before {
+  background-color: #fff;
+  border-color: #00acd1;
+  color: #00acd1;
+}
+
+.main-checkbox-white label{
+  font-size: 14px;
+  margin-right: 30px;
+}
+
 
 
 
@@ -1840,6 +1905,18 @@ textarea {
   margin-bottom: 20px;
 }
 
+.footer-info a{
+  color:#fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-info a:hover{
+  color:#fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .powered-PP{
   background-color: #434343;
   text-align: center;
@@ -1857,7 +1934,14 @@ textarea {
   width:12%;
 }
 
-
+.footer-social{
+  color:#fff;
+  border: 1px solid #fff;
+  padding:10px;
+  border-radius: 100px;
+  background-color:#1275A9;
+  margin-left: 10px;
+}
 
 
 /* POSITIONING */
